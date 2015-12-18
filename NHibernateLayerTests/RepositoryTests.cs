@@ -97,6 +97,16 @@ namespace NHibernateLayerTests
             listProducts[0].Category.Should().NotBeNull();
         }
 
+        [Fact]
+        public void Get_All_VehicleMakesAndVehicleModelsRelated()
+        {
+            var helper = new NHibernateHelper(_connectionString);
+            var repository = new Repository<VehicleMake>(helper.SessionFactory);
+            var makes = repository.All().ToList();
+            makes.Count().Should().BeGreaterThan(0);
+            makes[0].VehicleModels.Should().NotBeNull();
+        }
+
 
     }
 }
