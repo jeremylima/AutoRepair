@@ -72,19 +72,31 @@
     <Compile Include="Mappings\Mapper.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\Color.cs" />
     <Compile Include="Models\Make.cs" />
+    <Compile Include="Models\MotorType.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\VehicleMake.cs" />
     <Compile Include="Models\VehicleModel.cs" />
+    <Compile Include="Models\VehicleType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CategoryManagementService.cs" />
     <Compile Include="Services\ClientManagementService.cs" />
+    <Compile Include="Services\ColorManagementService.cs" />
     <Compile Include="Services\ICategoryManagementService.cs" />
     <Compile Include="Services\IClientManagementService.cs" />
+    <Compile Include="Services\IColorManagementService.cs" />
     <Compile Include="Services\IMakeManagementService.cs" />
+    <Compile Include="Services\IMotorTypeManagementService.cs" />
     <Compile Include="Services\IProductManagementService.cs" />
+    <Compile Include="Services\IVehicleManagementService.cs" />
+    <Compile Include="Services\IVehicleTypeManagementService.cs" />
     <Compile Include="Services\MakeManagementService.cs" />
+    <Compile Include="Services\MotorTypeManagementService.cs" />
     <Compile Include="Services\ProductManagementService.cs" />
+    <Compile Include="Services\VehicleManagementService.cs" />
+    <Compile Include="Services\VehicleTypeManagementService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -61,12 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Maps\ColorMap.cs" />
     <Compile Include="Maps\CategoryMap.cs" />
     <Compile Include="Maps\ClientMap.cs" />
     <Compile Include="Maps\MakeMap.cs" />
+    <Compile Include="Maps\MotorTypeMap.cs" />
     <Compile Include="Maps\ProductMap.cs" />
     <Compile Include="Maps\VehicleMakeMap.cs" />
+    <Compile Include="Maps\VehicleMap.cs" />
     <Compile Include="Maps\VehicleModelMap.cs" />
+    <Compile Include="Maps\VehicleTypeMap.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />

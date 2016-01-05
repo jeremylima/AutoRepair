@@ -103,6 +103,12 @@
     <Compile Include="Forms\Product\frmProductManagement.Designer.cs">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Vehicle\frmVehicleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle\frmVehicleManagement.Designer.cs">
+      <DependentUpon>frmVehicleManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmProductManagement.resx">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle\frmVehicleManagement.resx">
+      <DependentUpon>frmVehicleManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace AutoRepair.DataAccess.Entities
+﻿namespace AutoRepair.DataAccess.Entities
 {
     public class Product
     {

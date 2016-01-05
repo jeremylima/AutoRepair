@@ -32,9 +32,11 @@
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnClient = new DevExpress.XtraBars.BarButtonItem();
             this.btnProducts = new DevExpress.XtraBars.BarButtonItem();
+            this.btnVehicles = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -45,9 +47,10 @@
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.btnClient,
-            this.btnProducts});
+            this.btnProducts,
+            this.btnVehicles});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 3;
+            this.ribbonControl1.MaxItemId = 4;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -72,11 +75,21 @@
             this.btnProducts.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnProducts.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProducts_ItemClick);
             // 
+            // btnVehicles
+            // 
+            this.btnVehicles.Caption = "Vehiculos";
+            this.btnVehicles.Glyph = ((System.Drawing.Image)(resources.GetObject("btnVehicles.Glyph")));
+            this.btnVehicles.Id = 3;
+            this.btnVehicles.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicles.LargeGlyph")));
+            this.btnVehicles.Name = "btnVehicles";
+            this.btnVehicles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVehicles_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup3});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Menu Principal";
             // 
@@ -89,6 +102,11 @@
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnProducts);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnVehicles);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
             // Menu
             // 
@@ -115,5 +133,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DevExpress.XtraBars.BarButtonItem btnProducts;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem btnVehicles;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
     }
 }

@@ -107,6 +107,18 @@ namespace NHibernateLayerTests
             makes[0].VehicleModels.Should().NotBeNull();
         }
 
+        [Fact]
+        public void Get_All_Vehicles()
+        {
+            var helper = new NHibernateHelper(_connectionString);
+            var repository = new Repository<Vehicle>(helper.SessionFactory);
+            var vehicles = repository.All().ToList();
+            vehicles.Count().Should().BeGreaterThan(0);
+            vehicles[0].Color.Should().NotBeNull();
+            vehicles[0].MotorType.Should().NotBeNull();
+            vehicles[0].Type.Should().NotBeNull();
+
+        }
 
     }
 }

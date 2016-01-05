@@ -1,5 +1,6 @@
 ﻿using AutoRepair.UI.WinForms.Forms.Client;
 using AutoRepair.UI.WinForms.Forms.Product;
+using AutoRepair.UI.WinForms.Forms.Vehicle;
 
 namespace AutoRepair.UI.WinForms
 {
@@ -20,6 +21,12 @@ namespace AutoRepair.UI.WinForms
         {
             var products = new frmProductManagement();
             products.ShowDialog();
+        }
+
+        private void btnVehicles_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var vehicles = new frmVehicleManagement();
+            vehicles.ShowDialog();
         }
     }
 }
