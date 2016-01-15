@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVehicleManagement));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNewVehicle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEditVehicle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDeleteVehicle = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.gvVehicleList = new DevExpress.XtraGrid.GridControl();
@@ -44,12 +44,13 @@
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.ApplicationIcon = global::AutoRepair.UI.WinForms.Properties.Resources.logo;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3});
+            this.btnNewVehicle,
+            this.btnEditVehicle,
+            this.btnDeleteVehicle});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 4;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -57,31 +58,34 @@
             this.ribbonPage1});
             this.ribbonControl1.Size = new System.Drawing.Size(1102, 162);
             // 
-            // barButtonItem1
+            // btnNewVehicle
             // 
-            this.barButtonItem1.Caption = "Nuevo";
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.btnNewVehicle.Caption = "Nuevo";
+            this.btnNewVehicle.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNewVehicle.Glyph")));
+            this.btnNewVehicle.Id = 1;
+            this.btnNewVehicle.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNewVehicle.LargeGlyph")));
+            this.btnNewVehicle.Name = "btnNewVehicle";
+            this.btnNewVehicle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewVehicle_ItemClick);
             // 
-            // barButtonItem2
+            // btnEditVehicle
             // 
-            this.barButtonItem2.Caption = "Editar";
-            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
-            this.barButtonItem2.Id = 2;
-            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.btnEditVehicle.Caption = "Editar";
+            this.btnEditVehicle.Glyph = ((System.Drawing.Image)(resources.GetObject("btnEditVehicle.Glyph")));
+            this.btnEditVehicle.Id = 2;
+            this.btnEditVehicle.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnEditVehicle.LargeGlyph")));
+            this.btnEditVehicle.Name = "btnEditVehicle";
+            this.btnEditVehicle.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.btnEditVehicle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditVehicle_ItemClick);
             // 
-            // barButtonItem3
+            // btnDeleteVehicle
             // 
-            this.barButtonItem3.Caption = "Eliminar";
-            this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
-            this.barButtonItem3.Id = 3;
-            this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.btnDeleteVehicle.Caption = "Eliminar";
+            this.btnDeleteVehicle.Glyph = ((System.Drawing.Image)(resources.GetObject("btnDeleteVehicle.Glyph")));
+            this.btnDeleteVehicle.Id = 3;
+            this.btnDeleteVehicle.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnDeleteVehicle.LargeGlyph")));
+            this.btnDeleteVehicle.Name = "btnDeleteVehicle";
+            this.btnDeleteVehicle.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.btnDeleteVehicle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeleteVehicle_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -92,9 +96,9 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnNewVehicle);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnEditVehicle);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnDeleteVehicle);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // gvVehicleList
@@ -140,9 +144,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem btnNewVehicle;
+        private DevExpress.XtraBars.BarButtonItem btnEditVehicle;
+        private DevExpress.XtraBars.BarButtonItem btnDeleteVehicle;
         private DevExpress.XtraGrid.GridControl gvVehicleList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }

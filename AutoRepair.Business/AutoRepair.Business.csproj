@@ -76,10 +76,14 @@
     <Compile Include="Models\Make.cs" />
     <Compile Include="Models\MotorType.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ServiceCost.cs" />
+    <Compile Include="Models\TransmissionType.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\VehicleMake.cs" />
     <Compile Include="Models\VehicleModel.cs" />
     <Compile Include="Models\VehicleType.cs" />
+    <Compile Include="Models\WorkOrder.cs" />
+    <Compile Include="Models\WorkOrderDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CategoryManagementService.cs" />
     <Compile Include="Services\ClientManagementService.cs" />
@@ -90,13 +94,21 @@
     <Compile Include="Services\IMakeManagementService.cs" />
     <Compile Include="Services\IMotorTypeManagementService.cs" />
     <Compile Include="Services\IProductManagementService.cs" />
+    <Compile Include="Services\ITransmissionTypeManagementService.cs" />
+    <Compile Include="Services\IVehicleMakeManagementService.cs" />
     <Compile Include="Services\IVehicleManagementService.cs" />
+    <Compile Include="Services\IVehicleModelManagementService.cs" />
     <Compile Include="Services\IVehicleTypeManagementService.cs" />
+    <Compile Include="Services\IWorkOrderManagementService.cs" />
     <Compile Include="Services\MakeManagementService.cs" />
     <Compile Include="Services\MotorTypeManagementService.cs" />
     <Compile Include="Services\ProductManagementService.cs" />
+    <Compile Include="Services\TransmissionTypeManagementService.cs" />
+    <Compile Include="Services\VehicleMakeManagementService.cs" />
     <Compile Include="Services\VehicleManagementService.cs" />
+    <Compile Include="Services\VehicleModelManagementService.cs" />
     <Compile Include="Services\VehicleTypeManagementService.cs" />
+    <Compile Include="Services\WorkOrderManagementService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

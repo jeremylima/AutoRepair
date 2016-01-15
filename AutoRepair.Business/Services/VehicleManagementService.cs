@@ -37,8 +37,14 @@ namespace AutoRepair.Business.Services
 
         public Vehicle GetVehicle(int vehicleId)
         {
-            var client = _vehicleRepository.FindBy(vehicleId);
-            return AutoMapper.Mapper.Map<DataAccess.Entities.Vehicle, Vehicle>(client);
+            var vehicle = _vehicleRepository.FindBy(vehicleId);
+            return AutoMapper.Mapper.Map<DataAccess.Entities.Vehicle, Vehicle>(vehicle);
+        }
+
+        public VehicleConsult GetVehicleConsult(int vehicleId)
+        {
+            var vehicle = _vehicleRepository.FindBy(vehicleId);
+            return AutoMapper.Mapper.Map<DataAccess.Entities.Vehicle, VehicleConsult>(vehicle);
         }
 
         public void Delete(Vehicle vehicle)

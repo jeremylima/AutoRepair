@@ -15,6 +15,8 @@
         public virtual Color Color { get; set; }
 
         public virtual VehicleType Type { get; set; }
+
+        public virtual TransmissionType TransmissionType { get; set; }
     }
 
     public class VehicleConsult
@@ -36,5 +38,7 @@
         public virtual string Color { get; set; }
 
         public virtual string Type { get; set; }
+
+        public virtual string TransmissionType { get; set; }
     }
 }

@@ -66,6 +66,29 @@ namespace AutoRepair.UI.Ninject
             Bind<IVehicleManagementService>().To<VehicleManagementService>()
             .InTransientScope();
 
+            Bind<IIntKeyedRepository<VehicleMake>>().To<Repository<VehicleMake>>()
+            .InTransientScope();
+            Bind<IVehicleMakeManagementService>().To<VehicleMakeManagementService>()
+            .InTransientScope();
+
+            Bind<IIntKeyedRepository<VehicleModel>>().To<Repository<VehicleModel>>()
+            .InTransientScope();
+            Bind<IVehicleModelManagementService>().To<VehicleModelManagementService>()
+            .InTransientScope();
+
+            Bind<IIntKeyedRepository<TransmissionType>>().To<Repository<TransmissionType>>()
+            .InTransientScope();
+            Bind<ITransmissionTypeManagementService>().To<TransmissionTypeManagementService>()
+            .InTransientScope();
+
+            Bind<IIntKeyedRepository<ServiceCost>>().To<Repository<ServiceCost>>()
+            .InTransientScope();
+
+            Bind<IIntKeyedRepository<WorkOrder>>().To<Repository<WorkOrder>>()
+            .InTransientScope();
+            Bind<IWorkOrderManagementService>().To<WorkOrderManagementService>()
+            .InTransientScope();
+
         }
     }
 

@@ -27,5 +27,43 @@ namespace AutoRepair.UI.WinForms.Forms.Vehicle
         {
             LoadVehicles();
         }
+
+        private void btnNewVehicle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var vehicle = new frmVehicle();
+            vehicle.ShowDialog();
+
+            LoadVehicles();
+        }
+
+        private void btnEditVehicle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var rowHandle = gridView1.FocusedRowHandle;
+
+            if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
+            {
+                var vehicle = (Business.Models.VehicleConsult)(gvVehicleList.FocusedView as GridView).GetRow(rowHandle);
+
+                var frmProduct = new frmVehicle { _vehicle = _vehicleManagementService.GetVehicle(vehicle.Id) };
+                frmProduct.ShowDialog();
+                LoadVehicles();
+            }
+        }
+
+        private void btnDeleteVehicle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var rowHandle = gridView1.FocusedRowHandle;
+
+            if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
+            {
+                var vehicle = (Business.Models.VehicleConsult)(gvVehicleList.FocusedView as GridView).GetRow(rowHandle);
+
+                if (Notifier.ShowDeleteConfirmationMessage() == DialogResult.Yes)
+                {
+                    _vehicleManagementService.Delete(_vehicleManagementService.GetVehicle(vehicle.Id));
+                    LoadVehicles();
+                }
+            }
+        }
     }
 }

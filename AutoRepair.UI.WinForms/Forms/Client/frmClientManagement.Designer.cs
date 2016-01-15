@@ -44,6 +44,7 @@
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.ApplicationIcon = global::AutoRepair.UI.WinForms.Properties.Resources.logo;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -55,7 +56,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(943, 160);
+            this.ribbonControl1.Size = new System.Drawing.Size(943, 162);
             // 
             // btnNewClient
             // 
@@ -104,11 +105,11 @@
             // gvClientList
             // 
             this.gvClientList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gvClientList.Location = new System.Drawing.Point(0, 160);
+            this.gvClientList.Location = new System.Drawing.Point(0, 162);
             this.gvClientList.MainView = this.gridView1;
             this.gvClientList.MenuManager = this.ribbonControl1;
             this.gvClientList.Name = "gvClientList";
-            this.gvClientList.Size = new System.Drawing.Size(943, 426);
+            this.gvClientList.Size = new System.Drawing.Size(943, 424);
             this.gvClientList.TabIndex = 1;
             this.gvClientList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -127,6 +128,7 @@
             this.Controls.Add(this.gvClientList);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "frmClientManagement";
+            this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientManagement_Load);

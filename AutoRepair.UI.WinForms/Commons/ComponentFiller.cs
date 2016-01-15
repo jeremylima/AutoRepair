@@ -32,6 +32,20 @@ namespace AutoRepair.UI.WinForms.Commons
             else
                 _lookUpEdit.EditValue = indexItemSelected;
         }
+
+        public void Data<T>(IEnumerable<T> dataSource, string displayMember, string valueMember, string indexItemSelected)
+        {
+            _lookUpEdit.Properties.DataSource = dataSource;
+            _lookUpEdit.Properties.DisplayMember = displayMember;
+            _lookUpEdit.Properties.ValueMember = valueMember;
+
+            if (string.IsNullOrEmpty(indexItemSelected))
+                _lookUpEdit.ItemIndex = 0;
+            else
+                _lookUpEdit.EditValue = indexItemSelected;
+        }
+
+
     }
    
 }

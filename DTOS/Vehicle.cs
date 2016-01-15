@@ -18,6 +18,7 @@ namespace AutoRepair.DataAccess.Entities
                
         public virtual VehicleType Type { get; set; }
 
+        public virtual TransmissionType TransmissionType { get; set; }
 
     }
 }

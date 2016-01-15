@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
 using AutoRepair.UI.WinForms.Commons;
@@ -78,7 +69,7 @@ namespace AutoRepair.UI.WinForms.Forms.Product
 
                 _productManagementService.Update(_product);
 
-                Notifier.ShowAddSuccessMessage();
+                Notifier.ShowEditSuccessMessage();
 
             }
             else

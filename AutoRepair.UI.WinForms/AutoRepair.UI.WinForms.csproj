@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="Commons\ComponentFiller.cs" />
     <Compile Include="Commons\Notifier.cs" />
+    <Compile Include="Commons\Utils.cs" />
     <Compile Include="Forms\Client\frmClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +91,12 @@
     </Compile>
     <Compile Include="Forms\Client\frmClientManagement.Designer.cs">
       <DependentUpon>frmClientManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEntityFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEntityFinder.Designer.cs">
+      <DependentUpon>frmEntityFinder.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Product\frmProduct.cs">
       <SubType>Form</SubType>
@@ -103,11 +110,29 @@
     <Compile Include="Forms\Product\frmProductManagement.Designer.cs">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Vehicle\frmVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle\frmVehicle.Designer.cs">
+      <DependentUpon>frmVehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Vehicle\frmVehicleManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Vehicle\frmVehicleManagement.Designer.cs">
       <DependentUpon>frmVehicleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkOrder\frmWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkOrder\frmWorkOrder.Designer.cs">
+      <DependentUpon>frmWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkOrder\frmWorkOrderManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkOrder\frmWorkOrderManagement.Designer.cs">
+      <DependentUpon>frmWorkOrderManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -125,14 +150,26 @@
     <EmbeddedResource Include="Forms\Client\frmClientManagement.resx">
       <DependentUpon>frmClientManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEntityFinder.resx">
+      <DependentUpon>frmEntityFinder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmProductManagement.resx">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle\frmVehicle.resx">
+      <DependentUpon>frmVehicle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Vehicle\frmVehicleManagement.resx">
       <DependentUpon>frmVehicleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkOrder\frmWorkOrder.resx">
+      <DependentUpon>frmWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkOrder\frmWorkOrderManagement.resx">
+      <DependentUpon>frmWorkOrderManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -146,6 +183,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -164,6 +202,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\Images\1450225836_customers.png" />
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AutoRepair.Business\AutoRepair.Business.csproj">

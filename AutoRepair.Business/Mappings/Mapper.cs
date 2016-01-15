@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Runtime.Remoting.Channels;
 using AutoRepair.Business.Models;
 
 namespace AutoRepair.Business.Mappings
@@ -26,6 +27,12 @@ namespace AutoRepair.Business.Mappings
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.VehicleModel, VehicleModel>().ReverseMap();
 
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.VehicleMake, VehicleMake>().ReverseMap();
+
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.TransmissionType, TransmissionType>().ReverseMap();
+
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.VehicleMake, VehicleMakeConsult>().ReverseMap();
+
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Vehicle, Vehicle>().ReverseMap();
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Vehicle, VehicleConsult>()
@@ -39,12 +46,31 @@ namespace AutoRepair.Business.Mappings
                     opts => opts.MapFrom(src => src.Model.VehicleMake.Name))
                 .ForMember(dest => dest.Model,
                     opts => opts.MapFrom(src => src.Model.Name))
+                .ForMember(dest => dest.TransmissionType,
+                    opts => opts.MapFrom(src => src.TransmissionType.Name))
                 ;
 
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Category, Category>().ReverseMap();
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Make, Make>().ReverseMap();
+
+            /* AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrder, WorkOrder>().ReverseMap()
+                 .ForMember(dest=>dest.)
+                 ;*/
+
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrder, WorkOrder>().ReverseMap();
+
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrderDetail, WorkOrderDetail>().ReverseMap();
+
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.ServiceCost, ServiceCost>().ReverseMap();
+
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrder, WorkOrderConsult>()
+                .ForMember(dest => dest.FullClientName,
+                    opts => opts.MapFrom(src => src.Client.FirstName + " " + src.Client.LastName))
+                .ForMember(dest => dest.VehicleDescription,
+                    opts => opts.MapFrom(src =>src.Vehicle.Model.VehicleMake.Name + " " + src.Vehicle.Model.Name + " " + src.Vehicle.Type.Name + " " + src.Vehicle.Color.Name + " - " + src.Vehicle.LicensePlate))
+                ;
 
 
             AutoMapper.Mapper.AssertConfigurationIsValid();

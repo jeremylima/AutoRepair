@@ -16,7 +16,7 @@ namespace AutoRepair.DataAccess.NHibernate.Maps
             References(x => x.MotorType).Column("MotorTypeId").Not.Nullable();
             References(x => x.Color).Column("ColorId").Not.Nullable();
             References(x => x.Type).Column("VehicleTypeId").Not.Nullable();
-
+            References(x => x.TransmissionType).Column("TransmissionTypeId").Not.Nullable();
         }
     }
 }

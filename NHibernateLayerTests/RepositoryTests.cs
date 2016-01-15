@@ -108,6 +108,16 @@ namespace NHibernateLayerTests
         }
 
         [Fact]
+        public void Get_All_VehicleModelsByMakeId()
+        {
+            var helper = new NHibernateHelper(_connectionString);
+            var repository = new Repository<VehicleModel>(helper.SessionFactory);
+            var vehicleModels = repository.FilterBy(x => x.VehicleMake.Id == 5);
+            vehicleModels.Count().Should().BeGreaterThan(0);
+            //makes[0].VehicleModels.Should().NotBeNull();
+        }
+
+        [Fact]
         public void Get_All_Vehicles()
         {
             var helper = new NHibernateHelper(_connectionString);
@@ -118,6 +128,15 @@ namespace NHibernateLayerTests
             vehicles[0].MotorType.Should().NotBeNull();
             vehicles[0].Type.Should().NotBeNull();
 
+        }
+
+        [Fact]
+        public void Get_All_Orders()
+        {
+            var helper = new NHibernateHelper(_connectionString);
+            var repository = new Repository<WorkOrder>(helper.SessionFactory);
+            var workOrders = repository.All().ToList();
+            workOrders.Count().Should().BeGreaterThan(0);
         }
 
     }

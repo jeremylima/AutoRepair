@@ -33,27 +33,51 @@
             this.btnClient = new DevExpress.XtraBars.BarButtonItem();
             this.btnProducts = new DevExpress.XtraBars.BarButtonItem();
             this.btnVehicles = new DevExpress.XtraBars.BarButtonItem();
+            this.btnVehicleMakes = new DevExpress.XtraBars.BarButtonItem();
+            this.btnVehicleModels = new DevExpress.XtraBars.BarButtonItem();
+            this.btnVehicleColors = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMotorTypes = new DevExpress.XtraBars.BarButtonItem();
+            this.btnVehicleTypes = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductCategories = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductMakes = new DevExpress.XtraBars.BarButtonItem();
+            this.btnServiceOrders = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTransmissionTypes = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.ApplicationIcon = global::AutoRepair.UI.WinForms.Properties.Resources.logo;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.btnClient,
             this.btnProducts,
-            this.btnVehicles});
+            this.btnVehicles,
+            this.btnVehicleMakes,
+            this.btnVehicleModels,
+            this.btnVehicleColors,
+            this.btnMotorTypes,
+            this.btnVehicleTypes,
+            this.btnProductCategories,
+            this.btnProductMakes,
+            this.btnServiceOrders,
+            this.btnTransmissionTypes});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 4;
+            this.ribbonControl1.MaxItemId = 13;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+            this.ribbonPage1,
+            this.ribbonPage2});
             this.ribbonControl1.Size = new System.Drawing.Size(603, 143);
             // 
             // btnClient
@@ -84,12 +108,87 @@
             this.btnVehicles.Name = "btnVehicles";
             this.btnVehicles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVehicles_ItemClick);
             // 
+            // btnVehicleMakes
+            // 
+            this.btnVehicleMakes.Caption = "Marcas";
+            this.btnVehicleMakes.Glyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleMakes.Glyph")));
+            this.btnVehicleMakes.Id = 4;
+            this.btnVehicleMakes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleMakes.LargeGlyph")));
+            this.btnVehicleMakes.Name = "btnVehicleMakes";
+            // 
+            // btnVehicleModels
+            // 
+            this.btnVehicleModels.Caption = "Modelos";
+            this.btnVehicleModels.Glyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleModels.Glyph")));
+            this.btnVehicleModels.Id = 5;
+            this.btnVehicleModels.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleModels.LargeGlyph")));
+            this.btnVehicleModels.Name = "btnVehicleModels";
+            // 
+            // btnVehicleColors
+            // 
+            this.btnVehicleColors.Caption = "Colores";
+            this.btnVehicleColors.Glyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleColors.Glyph")));
+            this.btnVehicleColors.Id = 6;
+            this.btnVehicleColors.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleColors.LargeGlyph")));
+            this.btnVehicleColors.Name = "btnVehicleColors";
+            // 
+            // btnMotorTypes
+            // 
+            this.btnMotorTypes.Caption = "Tipo de Motores";
+            this.btnMotorTypes.Glyph = ((System.Drawing.Image)(resources.GetObject("btnMotorTypes.Glyph")));
+            this.btnMotorTypes.Id = 7;
+            this.btnMotorTypes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnMotorTypes.LargeGlyph")));
+            this.btnMotorTypes.Name = "btnMotorTypes";
+            // 
+            // btnVehicleTypes
+            // 
+            this.btnVehicleTypes.Caption = "Tipos";
+            this.btnVehicleTypes.Glyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleTypes.Glyph")));
+            this.btnVehicleTypes.Id = 8;
+            this.btnVehicleTypes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleTypes.LargeGlyph")));
+            this.btnVehicleTypes.Name = "btnVehicleTypes";
+            // 
+            // btnProductCategories
+            // 
+            this.btnProductCategories.Caption = "Categorias";
+            this.btnProductCategories.Glyph = ((System.Drawing.Image)(resources.GetObject("btnProductCategories.Glyph")));
+            this.btnProductCategories.Id = 9;
+            this.btnProductCategories.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnProductCategories.LargeGlyph")));
+            this.btnProductCategories.Name = "btnProductCategories";
+            // 
+            // btnProductMakes
+            // 
+            this.btnProductMakes.Caption = "Marcas";
+            this.btnProductMakes.Glyph = ((System.Drawing.Image)(resources.GetObject("btnProductMakes.Glyph")));
+            this.btnProductMakes.Id = 10;
+            this.btnProductMakes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnProductMakes.LargeGlyph")));
+            this.btnProductMakes.Name = "btnProductMakes";
+            // 
+            // btnServiceOrders
+            // 
+            this.btnServiceOrders.Caption = "Ordenes de Servicio";
+            this.btnServiceOrders.Glyph = ((System.Drawing.Image)(resources.GetObject("btnServiceOrders.Glyph")));
+            this.btnServiceOrders.Id = 11;
+            this.btnServiceOrders.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnServiceOrders.LargeGlyph")));
+            this.btnServiceOrders.Name = "btnServiceOrders";
+            this.btnServiceOrders.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnServiceOrders_ItemClick);
+            // 
+            // btnTransmissionTypes
+            // 
+            this.btnTransmissionTypes.Caption = "Tipo de Transmisiones";
+            this.btnTransmissionTypes.Glyph = ((System.Drawing.Image)(resources.GetObject("btnTransmissionTypes.Glyph")));
+            this.btnTransmissionTypes.Id = 12;
+            this.btnTransmissionTypes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnTransmissionTypes.LargeGlyph")));
+            this.btnTransmissionTypes.Name = "btnTransmissionTypes";
+            this.btnTransmissionTypes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTransmissionTypes_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup6});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Menu Principal";
             // 
@@ -108,12 +207,45 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.btnVehicles);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnServiceOrders);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup5});
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "Mantenimientos Generales";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnVehicleMakes);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnVehicleModels);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnVehicleColors);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnMotorTypes);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnVehicleTypes);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnTransmissionTypes);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.ShowCaptionButton = false;
+            this.ribbonPageGroup4.Text = "Vehiculos";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnProductCategories);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnProductMakes);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Productos";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 404);
             this.Controls.Add(this.ribbonControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Menu";
@@ -135,5 +267,18 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem btnVehicles;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem btnVehicleMakes;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.BarButtonItem btnVehicleModels;
+        private DevExpress.XtraBars.BarButtonItem btnVehicleColors;
+        private DevExpress.XtraBars.BarButtonItem btnMotorTypes;
+        private DevExpress.XtraBars.BarButtonItem btnVehicleTypes;
+        private DevExpress.XtraBars.BarButtonItem btnProductCategories;
+        private DevExpress.XtraBars.BarButtonItem btnProductMakes;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.BarButtonItem btnServiceOrders;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.BarButtonItem btnTransmissionTypes;
     }
 }

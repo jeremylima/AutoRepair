@@ -67,13 +67,18 @@
     <Compile Include="Maps\MakeMap.cs" />
     <Compile Include="Maps\MotorTypeMap.cs" />
     <Compile Include="Maps\ProductMap.cs" />
+    <Compile Include="Maps\ServiceCostMap.cs" />
+    <Compile Include="Maps\TransmissionTypeMap.cs" />
     <Compile Include="Maps\VehicleMakeMap.cs" />
     <Compile Include="Maps\VehicleMap.cs" />
     <Compile Include="Maps\VehicleModelMap.cs" />
     <Compile Include="Maps\VehicleTypeMap.cs" />
+    <Compile Include="Maps\WorkOrderDetailMap.cs" />
+    <Compile Include="Maps\WorkOrderMap.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
+    <Compile Include="SessionHandler.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
