@@ -50,7 +50,6 @@ namespace AutoRepair.Business.Mappings
                     opts => opts.MapFrom(src => src.TransmissionType.Name))
                 ;
 
-
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Category, Category>().ReverseMap();
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Make, Make>().ReverseMap();
@@ -62,6 +61,11 @@ namespace AutoRepair.Business.Mappings
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrder, WorkOrder>().ReverseMap();
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrderDetail, WorkOrderDetail>().ReverseMap();
+
+            AutoMapper.Mapper.CreateMap<WorkOrderDetail, WorkOrderDetailConsult>()
+                .ForMember(dest => dest.Product,
+                    opts => opts.MapFrom(src => src.Product.Description))
+                ;
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.ServiceCost, ServiceCost>().ReverseMap();
 

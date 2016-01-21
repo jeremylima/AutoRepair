@@ -34,7 +34,7 @@ namespace AutoRepair.Business.Models
 
     public class WorkOrderBinding
     {
-       public virtual BindingList<WorkOrderDetail> WorkOrderDetails { get; set; }
+       public virtual BindingList<WorkOrderDetailConsult> WorkOrderDetails { get; set; }
         public virtual BindingList<ServiceCost> ServiceCosts { get; set; }
 
         public virtual decimal Total

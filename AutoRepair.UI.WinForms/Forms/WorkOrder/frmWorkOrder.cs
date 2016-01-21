@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
@@ -38,11 +39,15 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
 
         private void frmWorkOrder_Load(object sender, EventArgs e)
         {
+            tabPane1.SelectedPage = tabNavigationProducts;
+            var detailsConsult = AutoMapper.Mapper.Map<IList<WorkOrderDetail>, IList<WorkOrderDetailConsult>>(_workOrder.WorkOrderDetails);
+            _workOrderBinding.ServiceCosts = new BindingList<ServiceCost>(_workOrder.ServiceCosts);
+            _workOrderBinding.WorkOrderDetails = new BindingList<WorkOrderDetailConsult>(detailsConsult);
+
             if (_workOrder != null)
             {
                 //_serviceCosts = new BindingList<ServiceCost>(_workOrder.ServiceCosts);
-                _workOrderBinding.ServiceCosts = new BindingList<ServiceCost>(_workOrder.ServiceCosts);
-                _workOrderBinding.WorkOrderDetails = new BindingList<WorkOrderDetail>(_workOrder.WorkOrderDetails);
+                
                 LoadClient(_workOrder.Client.Id);
                 LoadVehicle(_workOrder.Vehicle.Id);
                 LoadStatus(_workOrder.Status);
@@ -71,15 +76,12 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
 
         private void LoadServiceCosts()
         {
-
-
             gvServiceCosts.DataSource = _workOrderBinding.ServiceCosts;
-
         }
 
         private void LoadDetails()
         {
-            //gvServiceCosts.DataSource = _workOrderBinding.WorkOrderDetails;
+            gvDetails.DataSource = _workOrderBinding.WorkOrderDetails;
 
         }
 
@@ -159,9 +161,6 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 _workOrder.Date = (DateTime) dateEdit.EditValue;
                 _workOrder.Description = txtDescription.Text;
                 _workOrder.Status = cmbStatus.Text;
-                
-                
-
 
                 var ss = new List<ServiceCost>();
 
@@ -179,6 +178,29 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
 
                 _workOrderManagementService.Update(_workOrder);
             }
+        }
+
+        private void viewDetails_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        {
+            UpdateTotal();
+        }
+
+        private void tabPane1_SelectedPageChanged(object sender, DevExpress.XtraBars.Navigation.SelectedPageChangedEventArgs e)
+        {
+            barDetails.Visible = e.Page == tabNavigationProducts;
+        }
+
+        private void btnAddProductToDetails_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var finder = new frmEntityFinder
+            {
+                Entity = typeof (ProductConsult),
+                WindowState = FormWindowState.Maximized
+            };
+            finder.ShowDialog();
+
+            //if (finder.IdSelected != 0)
+                //LoadVehicle(finder.IdSelected);
         }
     }
 }

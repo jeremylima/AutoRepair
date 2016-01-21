@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEntityFinder));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.btnSelect = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnSelect = new DevExpress.XtraBars.BarButtonItem();
             this.gvEntityList = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -54,6 +54,15 @@
             this.ribbonPage1});
             this.ribbonControl1.Size = new System.Drawing.Size(739, 143);
             // 
+            // btnSelect
+            // 
+            this.btnSelect.Caption = "Seleccionar";
+            this.btnSelect.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSelect.Glyph")));
+            this.btnSelect.Id = 1;
+            this.btnSelect.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnSelect.LargeGlyph")));
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSelect_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -64,15 +73,6 @@
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSelect);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Caption = "Seleccionar";
-            this.btnSelect.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSelect.Glyph")));
-            this.btnSelect.Id = 1;
-            this.btnSelect.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnSelect.LargeGlyph")));
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSelect_ItemClick);
             // 
             // gvEntityList
             // 
@@ -93,6 +93,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.gridView1_CustomColumnDisplayText);
             // 
             // frmEntityFinder
             // 

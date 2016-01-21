@@ -30,10 +30,13 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkOrder));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.gvClient = new DevExpress.XtraGrid.GridControl();
@@ -43,7 +46,14 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationProducts = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.gvDetails = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.viewDetails = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.deleteDetail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDeleteDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SalePrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Quantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Total = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabNavigationServiceCosts = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.gvServiceCosts = new DevExpress.XtraGrid.GridControl();
             this.viewServiceCosts = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -62,6 +72,13 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.dateEdit = new DevExpress.XtraEditors.DateEdit();
             this.cmbStatus = new DevExpress.XtraEditors.LookUpEdit();
             this.txtTotal = new DevExpress.XtraEditors.TextEdit();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDetails = new DevExpress.XtraBars.Bar();
+            this.btnAddProductToDetails = new DevExpress.XtraBars.BarButtonItem();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardView1)).BeginInit();
@@ -70,7 +87,8 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.tabPane1.SuspendLayout();
             this.tabNavigationProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDetails)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteDetail)).BeginInit();
             this.tabNavigationServiceCosts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvServiceCosts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewServiceCosts)).BeginInit();
@@ -81,6 +99,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -89,9 +108,10 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.btnSave});
+            this.btnSave,
+            this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 2;
+            this.ribbonControl1.MaxItemId = 4;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -105,6 +125,11 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.btnSave.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnSave.LargeGlyph")));
             this.btnSave.Name = "btnSave";
             this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Id = 3;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // ribbonPage1
             // 
@@ -190,6 +215,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.tabPane1.Size = new System.Drawing.Size(870, 445);
             this.tabPane1.TabIndex = 5;
             this.tabPane1.Text = "tabPane1";
+            this.tabPane1.SelectedPageChanged += new DevExpress.XtraBars.Navigation.SelectedPageChangedEventHandler(this.tabPane1_SelectedPageChanged);
             // 
             // tabNavigationProducts
             // 
@@ -202,18 +228,114 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // 
             this.gvDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvDetails.Location = new System.Drawing.Point(0, 0);
-            this.gvDetails.MainView = this.gridView1;
+            this.gvDetails.MainView = this.viewDetails;
             this.gvDetails.MenuManager = this.ribbonControl1;
             this.gvDetails.Name = "gvDetails";
+            this.gvDetails.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btnDeleteDetail});
             this.gvDetails.Size = new System.Drawing.Size(852, 400);
             this.gvDetails.TabIndex = 0;
             this.gvDetails.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.viewDetails});
             // 
-            // gridView1
+            // viewDetails
             // 
-            this.gridView1.GridControl = this.gvDetails;
-            this.gridView1.Name = "gridView1";
+            this.viewDetails.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.deleteDetail,
+            this.colId,
+            this.colDescription,
+            this.SalePrice,
+            this.Quantity,
+            this.Total});
+            this.viewDetails.GridControl = this.gvDetails;
+            this.viewDetails.Name = "viewDetails";
+            this.viewDetails.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.True;
+            this.viewDetails.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+            this.viewDetails.OptionsCustomization.AllowColumnMoving = false;
+            this.viewDetails.OptionsCustomization.AllowGroup = false;
+            this.viewDetails.OptionsCustomization.AllowQuickHideColumns = false;
+            this.viewDetails.OptionsCustomization.AllowRowSizing = true;
+            this.viewDetails.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
+            this.viewDetails.OptionsView.ShowFooter = true;
+            this.viewDetails.OptionsView.ShowGroupPanel = false;
+            this.viewDetails.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.viewDetails_RowUpdated);
+            // 
+            // deleteDetail
+            // 
+            this.deleteDetail.Caption = "Delete";
+            this.deleteDetail.ColumnEdit = this.btnDeleteDetail;
+            this.deleteDetail.Name = "deleteDetail";
+            this.deleteDetail.Visible = true;
+            this.deleteDetail.VisibleIndex = 0;
+            this.deleteDetail.Width = 49;
+            // 
+            // btnDeleteDetail
+            // 
+            this.btnDeleteDetail.AutoHeight = false;
+            this.btnDeleteDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+            this.btnDeleteDetail.Name = "btnDeleteDetail";
+            this.btnDeleteDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // colId
+            // 
+            this.colId.Caption = "Id";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            this.colId.OptionsColumn.ReadOnly = true;
+            this.colId.Visible = true;
+            this.colId.VisibleIndex = 1;
+            this.colId.Width = 77;
+            // 
+            // colDescription
+            // 
+            this.colDescription.Caption = "Descripcion";
+            this.colDescription.FieldName = "Product";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.OptionsColumn.ReadOnly = true;
+            this.colDescription.Visible = true;
+            this.colDescription.VisibleIndex = 2;
+            this.colDescription.Width = 480;
+            // 
+            // SalePrice
+            // 
+            this.SalePrice.Caption = "Precio Venta";
+            this.SalePrice.DisplayFormat.FormatString = "c2";
+            this.SalePrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.SalePrice.FieldName = "SalePrice";
+            this.SalePrice.Name = "SalePrice";
+            this.SalePrice.Visible = true;
+            this.SalePrice.VisibleIndex = 3;
+            this.SalePrice.Width = 72;
+            // 
+            // Quantity
+            // 
+            this.Quantity.Caption = "Cantidad";
+            this.Quantity.DisplayFormat.FormatString = "n2";
+            this.Quantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.Quantity.FieldName = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Visible = true;
+            this.Quantity.VisibleIndex = 4;
+            this.Quantity.Width = 56;
+            // 
+            // Total
+            // 
+            this.Total.AppearanceCell.Options.UseTextOptions = true;
+            this.Total.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.Total.AppearanceHeader.Options.UseTextOptions = true;
+            this.Total.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.Total.Caption = "Total";
+            this.Total.DisplayFormat.FormatString = "c2";
+            this.Total.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.Total.FieldName = "Total";
+            this.Total.Name = "Total";
+            this.Total.OptionsColumn.ReadOnly = true;
+            this.Total.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Total", "{0:c2}")});
+            this.Total.Visible = true;
+            this.Total.VisibleIndex = 5;
+            this.Total.Width = 100;
             // 
             // tabNavigationServiceCosts
             // 
@@ -245,12 +367,14 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.colCostServiceCost});
             this.viewServiceCosts.GridControl = this.gvServiceCosts;
             this.viewServiceCosts.Name = "viewServiceCosts";
+            this.viewServiceCosts.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.True;
             this.viewServiceCosts.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
             this.viewServiceCosts.OptionsCustomization.AllowColumnMoving = false;
             this.viewServiceCosts.OptionsCustomization.AllowGroup = false;
             this.viewServiceCosts.OptionsCustomization.AllowQuickHideColumns = false;
             this.viewServiceCosts.OptionsCustomization.AllowRowSizing = true;
             this.viewServiceCosts.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.viewServiceCosts.OptionsView.ShowFooter = true;
             this.viewServiceCosts.OptionsView.ShowGroupPanel = false;
             this.viewServiceCosts.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView2_RowUpdated);
             // 
@@ -267,29 +391,33 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // 
             this.btnDeleteServiceCost.AutoHeight = false;
             this.btnDeleteServiceCost.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteServiceCost.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteServiceCost.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
             this.btnDeleteServiceCost.Name = "btnDeleteServiceCost";
             this.btnDeleteServiceCost.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteServiceCost.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteServiceCost_ButtonClick);
             // 
             // colDescriptionServiceCost
             // 
-            this.colDescriptionServiceCost.Caption = "Description";
+            this.colDescriptionServiceCost.Caption = "Descripcion";
             this.colDescriptionServiceCost.FieldName = "Description";
             this.colDescriptionServiceCost.Name = "colDescriptionServiceCost";
             this.colDescriptionServiceCost.Visible = true;
             this.colDescriptionServiceCost.VisibleIndex = 1;
-            this.colDescriptionServiceCost.Width = 594;
+            this.colDescriptionServiceCost.Width = 681;
             // 
             // colCostServiceCost
             // 
-            this.colCostServiceCost.Caption = "Cost";
+            this.colCostServiceCost.Caption = "Costo";
             this.colCostServiceCost.ColumnEdit = this.repositoryItemTextEdit1;
+            this.colCostServiceCost.DisplayFormat.FormatString = "c2";
+            this.colCostServiceCost.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colCostServiceCost.FieldName = "Cost";
             this.colCostServiceCost.Name = "colCostServiceCost";
+            this.colCostServiceCost.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Cost", "{0:c2}")});
             this.colCostServiceCost.Visible = true;
             this.colCostServiceCost.VisibleIndex = 2;
-            this.colCostServiceCost.Width = 190;
+            this.colCostServiceCost.Width = 103;
             // 
             // repositoryItemTextEdit1
             // 
@@ -409,6 +537,70 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.txtTotal.TabIndex = 15;
             this.txtTotal.TabStop = false;
             // 
+            // barManager1
+            // 
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.barDetails});
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnAddProductToDetails});
+            this.barManager1.MaxItemId = 2;
+            // 
+            // barDetails
+            // 
+            this.barDetails.BarName = "FlotingBar";
+            this.barDetails.DockCol = 0;
+            this.barDetails.DockRow = 0;
+            this.barDetails.FloatLocation = new System.Drawing.Point(966, 195);
+            this.barDetails.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnAddProductToDetails, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.barDetails.Offset = 75;
+            this.barDetails.OptionsBar.AllowQuickCustomization = false;
+            this.barDetails.OptionsBar.DisableClose = true;
+            this.barDetails.OptionsBar.DisableCustomization = true;
+            this.barDetails.Text = "Auto Repair";
+            // 
+            // btnAddProductToDetails
+            // 
+            this.btnAddProductToDetails.Caption = "Agregar Producto / Repuesto";
+            this.btnAddProductToDetails.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddProductToDetails.Glyph")));
+            this.btnAddProductToDetails.Id = 1;
+            this.btnAddProductToDetails.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddProductToDetails.LargeGlyph")));
+            this.btnAddProductToDetails.Name = "btnAddProductToDetails";
+            this.btnAddProductToDetails.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddProductToDetails_ItemClick);
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1137, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 788);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1137, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 788);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1137, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 788);
+            // 
             // frmWorkOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,6 +620,10 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.Controls.Add(this.gvVehicle);
             this.Controls.Add(this.gvClient);
             this.Controls.Add(this.ribbonControl1);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "frmWorkOrder";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -441,7 +637,8 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.tabPane1.ResumeLayout(false);
             this.tabNavigationProducts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvDetails)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteDetail)).EndInit();
             this.tabNavigationServiceCosts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvServiceCosts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewServiceCosts)).EndInit();
@@ -452,6 +649,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,7 +678,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         private DevExpress.XtraEditors.DateEdit dateEdit;
         private DevExpress.XtraEditors.LookUpEdit cmbStatus;
         private DevExpress.XtraGrid.GridControl gvDetails;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView viewDetails;
         private DevExpress.XtraGrid.GridControl gvServiceCosts;
         private DevExpress.XtraGrid.Views.Grid.GridView viewServiceCosts;
         private DevExpress.XtraEditors.TextEdit txtTotal;
@@ -489,5 +687,20 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn deleteServiceCost;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDeleteServiceCost;
+        private DevExpress.XtraGrid.Columns.GridColumn deleteDetail;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDeleteDetail;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn SalePrice;
+        private DevExpress.XtraGrid.Columns.GridColumn Quantity;
+        private DevExpress.XtraGrid.Columns.GridColumn Total;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.Bar barDetails;
+        private DevExpress.XtraBars.BarButtonItem btnAddProductToDetails;
     }
 }
