@@ -96,11 +96,65 @@
     <Compile Include="Forms\Client\frmClientManagement.Designer.cs">
       <DependentUpon>frmClientManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CrudBase\frmEntityBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CrudBase\frmEntityBase.Designer.cs">
+      <DependentUpon>frmEntityBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CrudBase\frmEntityManagementBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CrudBase\frmEntityManagementBase.Designer.cs">
+      <DependentUpon>frmEntityManagementBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmEntityFinder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmEntityFinder.Designer.cs">
       <DependentUpon>frmEntityFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmCategoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmColorManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmMotorType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmMotorTypeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmProductMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmProductMakeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmTransmissionType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmTransmissionTypeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmVehicleMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmVehicleMakeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmVehicleType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralCruds\frmVehicleTypeManagement.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Product\frmProduct.cs">
       <SubType>Form</SubType>
@@ -113,6 +167,15 @@
     </Compile>
     <Compile Include="Forms\Product\frmProductManagement.Designer.cs">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VehicleModel\frmVehicleModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VehicleModel\frmVehicleModel.Designer.cs">
+      <DependentUpon>frmVehicleModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VehicleModel\frmVehicleModelManagement.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Vehicle\frmVehicle.cs">
       <SubType>Form</SubType>
@@ -154,6 +217,12 @@
     <EmbeddedResource Include="Forms\Client\frmClientManagement.resx">
       <DependentUpon>frmClientManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrudBase\frmEntityBase.resx">
+      <DependentUpon>frmEntityBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrudBase\frmEntityManagementBase.resx">
+      <DependentUpon>frmEntityManagementBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEntityFinder.resx">
       <DependentUpon>frmEntityFinder.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmProductManagement.resx">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VehicleModel\frmVehicleModel.resx">
+      <DependentUpon>frmVehicleModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Vehicle\frmVehicle.resx">
       <DependentUpon>frmVehicle.cs</DependentUpon>

@@ -13,6 +13,7 @@
     public class WorkOrderDetailConsult
     {
         public virtual int Id { get; set; }
+        public virtual string Code { get; set; }
         public virtual string Product { get; set; }
         public virtual decimal CostPrice { get; set; }
         public virtual decimal SalePrice { get; set; }

@@ -41,5 +41,20 @@ namespace AutoRepair.DataAccess.NHibernate
             Session.Delete(entity);
             Flush();
         }
+
+        public static void Add(object entity)
+        {
+            Clear();
+            Session.Save(entity);
+            Flush();
+        }
+
+        public static int AddAndReturnIdCreated(object entity)
+        {
+            Clear();
+            var obj = Session.Save(entity);
+            Flush();
+            return (int) obj;
+        }
     }
 }

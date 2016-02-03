@@ -6,7 +6,7 @@ namespace AutoRepair.Business.Services
 {
     public interface IVehicleModelManagementService : IDisposable
     {
-        IEnumerable<VehicleModel> GetAllVehicleModels();
+        IEnumerable<VehicleModelConsult> GetAllVehicleModels();
         IEnumerable<VehicleModel> GetVehicleModelsByMake(int makeId);
         int GetVehicleMakeIdByVehicleModelId(int modelId);
         void Add(VehicleModel vehicleModel);

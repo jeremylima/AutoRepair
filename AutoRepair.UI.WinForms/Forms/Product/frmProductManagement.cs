@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
@@ -29,6 +30,7 @@ namespace AutoRepair.UI.WinForms.Forms.Product
         {
             var productList = _productManagementService.GetAllProducts();
             gvProductList.DataSource = productList;
+            gridView1.BestFitColumns();
         }
 
         private void frmProductManagement_Load(object sender, EventArgs e)
@@ -65,5 +67,18 @@ namespace AutoRepair.UI.WinForms.Forms.Product
                 }
             }
         }
+
+        private void gridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
+        {
+            var currencyColumns = e.Column.FieldName == "CostPrice" || e.Column.FieldName == "SalePrice";
+
+            if (currencyColumns && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
+            {
+                e.DisplayText = string.Format(CultureInfo.CurrentCulture, "{0:c}", Convert.ToDecimal(e.Value));
+
+            }
+        }
+
+      
     }
 }

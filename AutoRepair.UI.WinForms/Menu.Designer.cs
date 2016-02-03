@@ -115,6 +115,7 @@
             this.btnVehicleMakes.Id = 4;
             this.btnVehicleMakes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleMakes.LargeGlyph")));
             this.btnVehicleMakes.Name = "btnVehicleMakes";
+            this.btnVehicleMakes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVehicleMakes_ItemClick);
             // 
             // btnVehicleModels
             // 
@@ -123,6 +124,7 @@
             this.btnVehicleModels.Id = 5;
             this.btnVehicleModels.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleModels.LargeGlyph")));
             this.btnVehicleModels.Name = "btnVehicleModels";
+            this.btnVehicleModels.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVehicleModels_ItemClick);
             // 
             // btnVehicleColors
             // 
@@ -131,6 +133,7 @@
             this.btnVehicleColors.Id = 6;
             this.btnVehicleColors.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleColors.LargeGlyph")));
             this.btnVehicleColors.Name = "btnVehicleColors";
+            this.btnVehicleColors.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVehicleColors_ItemClick);
             // 
             // btnMotorTypes
             // 
@@ -139,14 +142,16 @@
             this.btnMotorTypes.Id = 7;
             this.btnMotorTypes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnMotorTypes.LargeGlyph")));
             this.btnMotorTypes.Name = "btnMotorTypes";
+            this.btnMotorTypes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMotorTypes_ItemClick);
             // 
             // btnVehicleTypes
             // 
-            this.btnVehicleTypes.Caption = "Tipos";
+            this.btnVehicleTypes.Caption = "Tipo de Vehiculos";
             this.btnVehicleTypes.Glyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleTypes.Glyph")));
             this.btnVehicleTypes.Id = 8;
             this.btnVehicleTypes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleTypes.LargeGlyph")));
             this.btnVehicleTypes.Name = "btnVehicleTypes";
+            this.btnVehicleTypes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVehicleTypes_ItemClick);
             // 
             // btnProductCategories
             // 
@@ -155,14 +160,16 @@
             this.btnProductCategories.Id = 9;
             this.btnProductCategories.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnProductCategories.LargeGlyph")));
             this.btnProductCategories.Name = "btnProductCategories";
+            this.btnProductCategories.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductCategories_ItemClick);
             // 
             // btnProductMakes
             // 
-            this.btnProductMakes.Caption = "Marcas";
+            this.btnProductMakes.Caption = "Marcas de Productos";
             this.btnProductMakes.Glyph = ((System.Drawing.Image)(resources.GetObject("btnProductMakes.Glyph")));
             this.btnProductMakes.Id = 10;
             this.btnProductMakes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnProductMakes.LargeGlyph")));
             this.btnProductMakes.Name = "btnProductMakes";
+            this.btnProductMakes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductMakes_ItemClick);
             // 
             // btnServiceOrders
             // 

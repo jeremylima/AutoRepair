@@ -84,6 +84,9 @@ namespace AutoRepair.UI.Ninject
             Bind<IIntKeyedRepository<ServiceCost>>().To<Repository<ServiceCost>>()
             .InTransientScope();
 
+            Bind<IIntKeyedRepository<WorkOrderDetail>>().To<Repository<WorkOrderDetail>>()
+            .InTransientScope();
+
             Bind<IIntKeyedRepository<WorkOrder>>().To<Repository<WorkOrder>>()
             .InTransientScope();
             Bind<IWorkOrderManagementService>().To<WorkOrderManagementService>()

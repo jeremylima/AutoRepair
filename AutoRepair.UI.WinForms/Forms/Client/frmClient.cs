@@ -60,7 +60,5 @@ namespace AutoRepair.UI.WinForms.Forms.Client
 
             Close();
         }
-
-       
     }
 }

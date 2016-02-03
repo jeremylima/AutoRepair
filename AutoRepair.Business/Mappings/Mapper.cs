@@ -27,6 +27,13 @@ namespace AutoRepair.Business.Mappings
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.VehicleModel, VehicleModel>().ReverseMap();
 
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.VehicleModel, VehicleModelConsult>()
+                .ForMember(dest => dest.VehicleMake,
+                    opts => opts.MapFrom(src => src.VehicleMake.Name))
+                .ForMember(dest => dest.VehicleMakeId,
+                    opts => opts.MapFrom(src => src.VehicleMake.Id))
+                ;
+
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.VehicleMake, VehicleMake>().ReverseMap();
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.TransmissionType, TransmissionType>().ReverseMap();
@@ -50,6 +57,23 @@ namespace AutoRepair.Business.Mappings
                     opts => opts.MapFrom(src => src.TransmissionType.Name))
                 ;
 
+            AutoMapper.Mapper.CreateMap<Vehicle, VehicleConsult>()
+                .ForMember(dest => dest.Color,
+                    opts => opts.MapFrom(src => src.Color.Name))
+                .ForMember(dest => dest.MotorType,
+                    opts => opts.MapFrom(src => src.MotorType.Name))
+                .ForMember(dest => dest.Type,
+                    opts => opts.MapFrom(src => src.Type.Name))
+                .ForMember(dest => dest.Make,
+                    opts => opts.MapFrom(src => src.Model.VehicleMake.Name))
+                .ForMember(dest => dest.Model,
+                    opts => opts.MapFrom(src => src.Model.Name))
+                .ForMember(dest => dest.TransmissionType,
+                    opts => opts.MapFrom(src => src.TransmissionType.Name))
+                ;
+
+           
+
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Category, Category>().ReverseMap();
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Make, Make>().ReverseMap();
@@ -65,6 +89,10 @@ namespace AutoRepair.Business.Mappings
             AutoMapper.Mapper.CreateMap<WorkOrderDetail, WorkOrderDetailConsult>()
                 .ForMember(dest => dest.Product,
                     opts => opts.MapFrom(src => src.Product.Description))
+                .ForMember(dest => dest.Code,
+                    opts => opts.MapFrom(src => src.Product.Code))
+                .ForMember(dest => dest.Id,
+                    opts => opts.MapFrom(src => src.Product.Id))
                 ;
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.ServiceCost, ServiceCost>().ReverseMap();

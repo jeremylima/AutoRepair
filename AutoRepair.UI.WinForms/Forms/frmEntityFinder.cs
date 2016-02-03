@@ -9,7 +9,7 @@ namespace AutoRepair.UI.WinForms.Forms
     public partial class frmEntityFinder : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public Type Entity { get; set; }
-        public int IdSelected { get; set; }
+        public dynamic EntitySelected { get; set; }
         public IClientManagementService _clientManagementService;
         public IVehicleManagementService _vehicleManagementService;
         public IProductManagementService _productManagementService;
@@ -33,9 +33,14 @@ namespace AutoRepair.UI.WinForms.Forms
                 gvEntityList.DataSource = _clientManagementService.GetAllClients();
             else if(Entity == typeof(Business.Models.VehicleConsult))
                 gvEntityList.DataSource = _vehicleManagementService.GetAllVehicles();
-            else if (Entity == typeof(Business.Models.ProductConsult))
+            else if (Entity == typeof (Business.Models.ProductConsult))
+            {
                 gvEntityList.DataSource = _productManagementService.GetAllProducts();
-            
+                gridView1.Columns[0].Visible = false;
+            }
+
+            gridView1.BestFitColumns();
+
         }
 
         private void btnSelect_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -49,8 +54,8 @@ namespace AutoRepair.UI.WinForms.Forms
 
             if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
             {
-                dynamic entitySelected = (gvEntityList.FocusedView as GridView).GetRow(rowHandle);
-                IdSelected = entitySelected.Id;
+                EntitySelected = (gvEntityList.FocusedView as GridView).GetRow(rowHandle);
+                //IdSelected = entitySelected.Id;
             }
             Close();
         }
@@ -64,20 +69,10 @@ namespace AutoRepair.UI.WinForms.Forms
         {
             var currencyColumns = e.Column.FieldName == "CostPrice" || e.Column.FieldName == "SalePrice";
 
-            
-
-
             if (currencyColumns && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
             {
                 e.DisplayText = string.Format(CultureInfo.CurrentCulture, "{0:c}", Convert.ToDecimal(e.Value));
-
-                /*int currencyType = (int)view.GetListSourceRowCellValue(e.ListSourceRowIndex, "CurrencyType");
-                decimal price = Convert.ToDecimal(e.Value);
-                switch (currencyType)
-                {
-                    case 0: e.DisplayText = string.Format(ciUSA, "{0:c}", price); break;
-                    case 1: e.DisplayText = string.Format(ciEUR, "{0:c}", price); break;
-                }*/
+                
             }
         }
     }

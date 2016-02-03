@@ -37,8 +37,8 @@ namespace AutoRepair.Business.Services
 
         public Product GetProduct(int productId)
         {
-            var client = _productRepository.FindBy(productId);
-            return AutoMapper.Mapper.Map<DataAccess.Entities.Product, Product>(client);
+            var product = _productRepository.FindBy(productId);
+            return AutoMapper.Mapper.Map<DataAccess.Entities.Product, Product>(product);
         }
 
         public void Delete(Product product)

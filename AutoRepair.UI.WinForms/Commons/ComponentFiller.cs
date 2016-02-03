@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using AutoRepair.Business.Models;
 using DevExpress.XtraEditors;
 
@@ -44,8 +45,7 @@ namespace AutoRepair.UI.WinForms.Commons
             else
                 _lookUpEdit.EditValue = indexItemSelected;
         }
-
-
+        
     }
    
 }

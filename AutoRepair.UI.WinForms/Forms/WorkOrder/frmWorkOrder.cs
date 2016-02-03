@@ -1,31 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutoRepair.Business.Models;
 using AutoRepair.Business.Services;
+using AutoRepair.DataAccess.Entities;
 using AutoRepair.UI.Ninject;
 using AutoRepair.UI.WinForms.Commons;
+using DevExpress.Utils;
+using DevExpress.XtraGrid.Views.Grid;
+using ServiceCost = AutoRepair.Business.Models.ServiceCost;
+using WorkOrderDetail = AutoRepair.Business.Models.WorkOrderDetail;
 
 namespace AutoRepair.UI.WinForms.Forms.WorkOrder
 {
     public partial class frmWorkOrder : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public Business.Models.WorkOrder _workOrder { get; set; }
+        public bool FinalizeWorkOrder { get; set; }
+        public bool IsViewAction { get; set; }
         public WorkOrderBinding _workOrderBinding { get; set; }
         public IClientManagementService _clientManagementService;
         public IVehicleManagementService _vehicleManagementService;
         public IWorkOrderManagementService _workOrderManagementService;
+        public IProductManagementService _productManagementService;
 
-        public Business.Models.Vehicle _vehicle;
+        public int _vehicleId;
         public Business.Models.Client _client;
+        public ProductConsult _product;
 
         public frmWorkOrder()
         {
@@ -33,39 +36,64 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             _clientManagementService = CompositionRoot.Resolve<IClientManagementService>();
             _vehicleManagementService = CompositionRoot.Resolve<IVehicleManagementService>();
             _workOrderManagementService = CompositionRoot.Resolve<IWorkOrderManagementService>();
+            _productManagementService = CompositionRoot.Resolve<IProductManagementService>();
 
             InitializeComponent();
         }
 
         private void frmWorkOrder_Load(object sender, EventArgs e)
         {
-            tabPane1.SelectedPage = tabNavigationProducts;
-            var detailsConsult = AutoMapper.Mapper.Map<IList<WorkOrderDetail>, IList<WorkOrderDetailConsult>>(_workOrder.WorkOrderDetails);
-            _workOrderBinding.ServiceCosts = new BindingList<ServiceCost>(_workOrder.ServiceCosts);
-            _workOrderBinding.WorkOrderDetails = new BindingList<WorkOrderDetailConsult>(detailsConsult);
+            LoadInitValues();
+
+            
+            
 
             if (_workOrder != null)
             {
-                //_serviceCosts = new BindingList<ServiceCost>(_workOrder.ServiceCosts);
+                var detailsConsult = AutoMapper.Mapper.Map<IList<WorkOrderDetail>, IList<WorkOrderDetailConsult>>(_workOrder.WorkOrderDetails);
+                _workOrderBinding.ServiceCosts = new BindingList<ServiceCost>(_workOrder.ServiceCosts);
+                _workOrderBinding.WorkOrderDetails = new BindingList<WorkOrderDetailConsult>(detailsConsult);
+                LoadClient(_workOrder.Client);
+                LoadVehicle(AutoMapper.Mapper.Map<Business.Models.Vehicle, VehicleConsult>(_workOrder.Vehicle));
                 
-                LoadClient(_workOrder.Client.Id);
-                LoadVehicle(_workOrder.Vehicle.Id);
                 LoadStatus(_workOrder.Status);
                 lbOrderId.Text = _workOrder.Id.ToString();
                 dateEdit.EditValue = _workOrder.Date;
                 txtDescription.Text = _workOrder.Description;
-                LoadDetails();
-                LoadServiceCosts();
-                UpdateTotal();
                 
             }
             else
             {
-                lbOrderId.Text = "New";
+                _workOrderBinding.ServiceCosts = new BindingList<ServiceCost>();
+                _workOrderBinding.WorkOrderDetails = new BindingList<WorkOrderDetailConsult>();
+
+                lbOrderId.Text = @"New";
                 dateEdit.EditValue = DateTime.Now.Date;
                 LoadStatus();
             }
 
+            LoadDetails();
+            LoadServiceCosts();
+            UpdateTotal();
+        }
+
+        private void LoadInitValues()
+        {
+            if (IsViewAction)
+            {
+                btnSave.Enabled = false;
+                btnSaveAndFinalize.Enabled = false;
+                barDetails.Visible = false;
+                viewServiceCosts.OptionsView.NewItemRowPosition= NewItemRowPosition.None;
+                deleteServiceCost.Visible = false;
+                deleteDetail.Visible = false;
+                viewServiceCosts.OptionsBehavior.Editable = false;
+                viewDetails.OptionsBehavior.Editable = false;
+
+
+            }
+
+            tabPane1.SelectedPage = tabNavigationProducts;
 
         }
 
@@ -85,60 +113,52 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
 
         }
 
-        private void LoadStatus(string statusSelected = "")
+        private void LoadStatus(WorkOrderStatus statusSelected = WorkOrderStatus.Open)
         {
-            var workOrderStatus = Utils.GetWorkOrderStatus();
-            ComponentFiller.FillLookUpEdit(cmbStatus).Data(workOrderStatus, "Name", "Name", statusSelected);
-
+            cmbStatus.Properties.DataSource = Enum.GetNames(typeof(WorkOrderStatus));
+            cmbStatus.EditValue = statusSelected.ToString();
         }
-
 
         private void gvClient_DoubleClick(object sender, EventArgs e)
         {
+            if(IsViewAction)
+                return;
+
             var finder = new frmEntityFinder {Entity = typeof (Business.Models.Client)};
             finder.ShowDialog();
 
-            if(finder.IdSelected!=0)
-                LoadClient(finder.IdSelected);
+            if(finder.EntitySelected!=null)
+                LoadClient(finder.EntitySelected);
         }
 
         private void gvVehicle_DoubleClick(object sender, EventArgs e)
         {
+            if (IsViewAction)
+                return;
+
             var finder = new frmEntityFinder { Entity = typeof(VehicleConsult) };
             finder.ShowDialog();
 
-            if (finder.IdSelected != 0)
-                LoadVehicle(finder.IdSelected);
+            if (finder.EntitySelected != null)
+                LoadVehicle(finder.EntitySelected);
         }
 
-        private void LoadClient(int clientId = 0)
+        private void LoadClient(Business.Models.Client client)
         {
-            var clientList = new List<Business.Models.Client>();
-
-            if (clientId != 0)
+            if (client != null)
             {
-                _client = _clientManagementService.GetClient(clientId);
-                clientList.Add(_client);
-                gvClient.DataSource = clientList;
-                return;
+                _client = client;
+                gvClient.DataSource = new List<Business.Models.Client> {client};
             }
-
-            gvClient.DataSource = clientList;
         }
 
-        private void LoadVehicle(int vehicleId = 0)
+        private void LoadVehicle(Business.Models.VehicleConsult vehicle)
         {
-            var vehicleList = new List<Business.Models.VehicleConsult> ();
-
-            if (vehicleId != 0)
+            if (vehicle != null)
             {
-                _vehicle = _vehicleManagementService.GetVehicle(vehicleId);
-                vehicleList.Add(_vehicleManagementService.GetVehicleConsult(vehicleId));
-                gvVehicle.DataSource = vehicleList;
-                return;
+                _vehicleId = vehicle.Id;
+                gvVehicle.DataSource = new List<VehicleConsult> { vehicle };
             }
-
-            gvVehicle.DataSource = vehicleList;
         }
 
         private void gridView2_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
@@ -154,30 +174,85 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (!string.IsNullOrEmpty(FormValidated))
+            {
+                Notifier.ShowRequiereFieldsMessage(FormValidated);
+                return;
+            }
+
+            SaveOrUpdateWorkOrder();
+            Notifier.ShowAddSuccessMessage();
+            Close();
+        }
+
+        private void SaveOrUpdateWorkOrder(bool finalized = false)
+        {
             if (_workOrder != null)
             {
                 _workOrder.Client = _client;
-                _workOrder.Vehicle = _vehicle;
+                _workOrder.Vehicle = _vehicleManagementService.GetVehicle(_vehicleId);
                 _workOrder.Date = (DateTime) dateEdit.EditValue;
                 _workOrder.Description = txtDescription.Text;
-                _workOrder.Status = cmbStatus.Text;
+                _workOrder.Status = WorkOrderStatus.Open;
 
-                var ss = new List<ServiceCost>();
+                _workOrder.ServiceCosts = TransformServiceCostsBinding();
+                _workOrder.WorkOrderDetails = TransformDetailsBinding();
 
-                foreach (var serviceCost in _workOrderBinding.ServiceCosts)
-                {
-                    ss.Add(new ServiceCost
-                    {
-                        WorkOrder = _workOrder,
-                        Cost = serviceCost.Cost,
-                        Description = serviceCost.Description
-                    });
-                }
-
-                _workOrder.ServiceCosts = ss;
-
-                _workOrderManagementService.Update(_workOrder);
+                _workOrderManagementService.Update(_workOrder, finalized);
             }
+            else
+            {
+                _workOrderManagementService.Add(new Business.Models.WorkOrder
+                {
+                    Client = _client,
+                    Vehicle = _vehicleManagementService.GetVehicle(_vehicleId),
+                    Date = (DateTime) dateEdit.EditValue,
+                    Description = txtDescription.Text,
+                    Status = WorkOrderStatus.Open,
+                    ServiceCosts = TransformServiceCostsBinding(),
+                    WorkOrderDetails = TransformDetailsBinding()
+                }, finalized);
+            }
+        }
+
+        public string FormValidated
+        {
+            get
+            {
+                if (_client == null)
+                    return "Por favor seleccione un cliente.";
+
+                if(_vehicleId == 0)
+                    return "Por favor seleccione un vehiculo.";
+
+                if (!(viewDetails.RowCount > 0) && !(viewServiceCosts.RowCount > 0))
+                    return "Por favor ingrese productos o servicios a la order.";
+
+                return string.Empty;
+            }
+        }
+
+        private IList<WorkOrderDetail> TransformDetailsBinding()
+        {
+            return _workOrderBinding.WorkOrderDetails.Select(workOrderDetail => new WorkOrderDetail
+            {
+                WorkOrder = _workOrder ?? new Business.Models.WorkOrder(),
+                Product = _productManagementService.GetProduct(workOrderDetail.Id),
+                CostPrice = workOrderDetail.CostPrice,
+                SalePrice = workOrderDetail.SalePrice,
+                Quantity = workOrderDetail.Quantity
+            }).ToList();
+
+        }
+
+        private IList<ServiceCost> TransformServiceCostsBinding()
+        {
+            return _workOrderBinding.ServiceCosts.Select(serviceCost => new ServiceCost
+            {
+                WorkOrder = _workOrder ?? new Business.Models.WorkOrder(),
+                Cost = serviceCost.Cost,
+                Description = serviceCost.Description
+            }).ToList();
         }
 
         private void viewDetails_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
@@ -187,7 +262,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
 
         private void tabPane1_SelectedPageChanged(object sender, DevExpress.XtraBars.Navigation.SelectedPageChangedEventArgs e)
         {
-            barDetails.Visible = e.Page == tabNavigationProducts;
+            barDetails.Visible = e.Page == tabNavigationProducts && !IsViewAction;
         }
 
         private void btnAddProductToDetails_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -199,8 +274,47 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             };
             finder.ShowDialog();
 
-            //if (finder.IdSelected != 0)
-                //LoadVehicle(finder.IdSelected);
+            if (finder.EntitySelected != null)
+            {
+                _product = finder.EntitySelected;
+                viewDetails.AddNewRow();
+                viewDetails.FocusedColumn = viewDetails.VisibleColumns[4];
+                viewDetails.ShowEditor();
+            }
+
+        }
+
+        private void viewDetails_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
+        {
+            viewDetails.SetRowCellValue(e.RowHandle, "Id", _product.Id);
+            viewDetails.SetRowCellValue(e.RowHandle, "Code",_product.Code);
+            viewDetails.SetRowCellValue(e.RowHandle, "Product", _product.Description);
+            viewDetails.SetRowCellValue(e.RowHandle, "CostPrice", _product.CostPrice);
+            viewDetails.SetRowCellValue(e.RowHandle, "SalePrice", _product.SalePrice);
+            viewDetails.SetRowCellValue(e.RowHandle, "Quantity", 1);
+
+        }
+
+        private void btnDeleteDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            viewDetails.DeleteRow(viewDetails.FocusedRowHandle);
+            UpdateTotal();
+        }
+
+        private void btnSaveAndFinalize_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(FormValidated))
+            {
+                Notifier.ShowRequiereFieldsMessage(FormValidated);
+                return;
+            }
+
+            if (Notifier.ShowFinalizeWorkOrderMessage() == DialogResult.Yes)
+            {
+                SaveOrUpdateWorkOrder(true);
+                Notifier.ShowAddSuccessMessage();
+                Close();
+            }
         }
     }
 }

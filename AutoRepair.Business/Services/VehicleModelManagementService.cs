@@ -20,9 +20,9 @@ namespace AutoRepair.Business.Services
             _vehicleModelRepository.Dispose();
         }
 
-        public IEnumerable<VehicleModel> GetAllVehicleModels()
+        public IEnumerable<VehicleModelConsult> GetAllVehicleModels()
         {
-            return _vehicleModelRepository.All().Select(AutoMapper.Mapper.Map<DataAccess.Entities.VehicleModel, VehicleModel>);
+            return _vehicleModelRepository.All().Select(AutoMapper.Mapper.Map<DataAccess.Entities.VehicleModel, VehicleModelConsult>);
         }
 
         public IEnumerable<VehicleModel> GetVehicleModelsByMake(int makeId)
