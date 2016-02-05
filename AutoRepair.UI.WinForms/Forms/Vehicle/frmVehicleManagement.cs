@@ -65,5 +65,20 @@ namespace AutoRepair.UI.WinForms.Forms.Vehicle
                 }
             }
         }
+
+        private void btnVehicleHistory_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var rowHandle = gridView1.FocusedRowHandle;
+
+            if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
+            {
+                var vehicle = (Business.Models.VehicleConsult)(gvVehicleList.FocusedView as GridView).GetRow(rowHandle);
+
+                var frmHistory = new frmVehicleHistory{ _vehicle = _vehicleManagementService.GetVehicle(vehicle.Id) };
+                frmHistory.ShowDialog();
+                
+            }
+
+        }
     }
 }

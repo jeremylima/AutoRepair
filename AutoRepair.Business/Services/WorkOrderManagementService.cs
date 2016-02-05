@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using AutoRepair.Business.Models;
 using AutoRepair.DataAccess.Entities;
 using AutoRepair.DataAccess.Infrastructure;
+using NHibernate.Transaction;
 using Product = AutoRepair.DataAccess.Entities.Product;
 using ServiceCost = AutoRepair.DataAccess.Entities.ServiceCost;
 using WorkOrder = AutoRepair.Business.Models.WorkOrder;
@@ -133,6 +136,34 @@ namespace AutoRepair.Business.Services
 
             _productRepository.Update(products);
 
+        }
+
+        public BindingList<VehicleHistory> GetAllWorkOrdersByVehicle(int vehicleId)
+        {
+           var workOrders =  _workOrderRepository.FilterBy(x => x.Vehicle.Id == vehicleId && x.Status == WorkOrderStatus.Finalized);
+            var vehicleHistory = new BindingList<VehicleHistory>();
+
+            foreach (var workOrder in workOrders)
+            {
+                var serviceCosts =
+                    AutoMapper.Mapper.Map<IList<DataAccess.Entities.ServiceCost>, IList<Models.ServiceCost>>(
+                        workOrder.ServiceCosts);
+
+                var details =
+                    AutoMapper.Mapper.Map<IList<DataAccess.Entities.WorkOrderDetail>, IList<WorkOrderDetailConsult>>(
+                        workOrder.WorkOrderDetails);
+
+                vehicleHistory.Add(new VehicleHistory
+                {
+                    Date = workOrder.Date,
+                    Description = workOrder.Description,
+                    OrderId = workOrder.Id,
+                    WorkOrderDetails = new BindingList<WorkOrderDetailConsult>(details),
+                    ServiceCosts =  new BindingList<Models.ServiceCost>(serviceCosts)
+                });
+            }
+
+            return vehicleHistory;
         }
 
         public void Finalize(WorkOrder workOrder)

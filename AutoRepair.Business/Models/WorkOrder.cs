@@ -31,6 +31,16 @@ namespace AutoRepair.Business.Models
 
     }
 
+    public class VehicleHistory
+    {
+        public virtual int OrderId { get; set; }
+        public virtual DateTime Date { get; set; }
+        public virtual string Description { get; set; }
+        public virtual BindingList<WorkOrderDetailConsult> WorkOrderDetails { get; set; }
+        public virtual BindingList<ServiceCost> ServiceCosts { get; set; }
+
+    }
+
     public class WorkOrderBinding
     {
         public virtual BindingList<WorkOrderDetailConsult> WorkOrderDetails { get; set; }

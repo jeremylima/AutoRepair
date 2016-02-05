@@ -37,6 +37,8 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.gvVehicleList = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnVehicleHistory = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvVehicleList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -50,9 +52,10 @@
             this.ribbonControl1.ExpandCollapseItem,
             this.btnNewVehicle,
             this.btnEditVehicle,
-            this.btnDeleteVehicle});
+            this.btnDeleteVehicle,
+            this.btnVehicleHistory});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 4;
+            this.ribbonControl1.MaxItemId = 5;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -90,7 +93,8 @@
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2});
             this.ribbonPage1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.Image")));
             this.ribbonPage1.Name = "ribbonPage1";
             // 
@@ -118,6 +122,20 @@
             this.gridView1.GridControl = this.gvVehicleList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnVehicleHistory);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            // 
+            // btnVehicleHistory
+            // 
+            this.btnVehicleHistory.Caption = "Ver Historial del Vehiculo";
+            this.btnVehicleHistory.Glyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleHistory.Glyph")));
+            this.btnVehicleHistory.Id = 4;
+            this.btnVehicleHistory.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnVehicleHistory.LargeGlyph")));
+            this.btnVehicleHistory.Name = "btnVehicleHistory";
+            this.btnVehicleHistory.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVehicleHistory_ItemClick);
             // 
             // frmVehicleManagement
             // 
@@ -149,5 +167,7 @@
         private DevExpress.XtraBars.BarButtonItem btnDeleteVehicle;
         private DevExpress.XtraGrid.GridControl gvVehicleList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraBars.BarButtonItem btnVehicleHistory;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
     }
 }

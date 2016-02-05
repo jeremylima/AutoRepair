@@ -183,6 +183,12 @@
     <Compile Include="Forms\Vehicle\frmVehicle.Designer.cs">
       <DependentUpon>frmVehicle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Vehicle\frmVehicleHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle\frmVehicleHistory.Designer.cs">
+      <DependentUpon>frmVehicleHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Vehicle\frmVehicleManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Vehicle\frmVehicle.resx">
       <DependentUpon>frmVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle\frmVehicleHistory.resx">
+      <DependentUpon>frmVehicleHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Vehicle\frmVehicleManagement.resx">
       <DependentUpon>frmVehicleManagement.cs</DependentUpon>

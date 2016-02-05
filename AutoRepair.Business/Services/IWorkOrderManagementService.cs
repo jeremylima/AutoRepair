@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using AutoRepair.Business.Models;
 using AutoRepair.DataAccess.Entities;
 using WorkOrder = AutoRepair.Business.Models.WorkOrder;
@@ -16,5 +17,6 @@ namespace AutoRepair.Business.Services
         void Delete(WorkOrder workOrder);
         void Finalize(int workOrderId);
         void ReOpen(int idworkOrderId);
+        BindingList<VehicleHistory> GetAllWorkOrdersByVehicle(int vehicleId);
     }
 }

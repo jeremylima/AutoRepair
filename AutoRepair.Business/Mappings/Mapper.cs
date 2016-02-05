@@ -86,6 +86,15 @@ namespace AutoRepair.Business.Mappings
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrderDetail, WorkOrderDetail>().ReverseMap();
 
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrderDetail, WorkOrderDetailConsult>()
+                .ForMember(dest => dest.Product,
+                    opts => opts.MapFrom(src => src.Product.Description))
+                .ForMember(dest => dest.Code,
+                    opts => opts.MapFrom(src => src.Product.Code))
+                .ForMember(dest => dest.Id,
+                    opts => opts.MapFrom(src => src.Product.Id))
+                ;
+
             AutoMapper.Mapper.CreateMap<WorkOrderDetail, WorkOrderDetailConsult>()
                 .ForMember(dest => dest.Product,
                     opts => opts.MapFrom(src => src.Product.Description))
