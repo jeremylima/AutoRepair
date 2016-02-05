@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\AutoRepair.Business\AutoRepair.Business.csproj">
+			<Name>AutoRepair.Business</Name>
+			<Project>{08BE9FF3-224E-445B-969A-A60761E63436}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\AutoRepair.UI.WinForms\AutoRepair.UI.WinForms.csproj">
+			<Name>AutoRepair.UI.WinForms</Name>
+			<Project>{8B840BA4-108F-4BCB-9566-682CF410280B}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\DTOS\DTOS.csproj">
+			<Name>DTOS</Name>
+			<Project>{FFC1E5D1-577B-4C78-8790-C4927B3003F3}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\NHibernateLayer\NHibernateLayer.csproj">
+			<Name>NHibernateLayer</Name>
+			<Project>{505330DE-710F-41EB-8EB2-08576EE21CF7}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\NHibernateLayerTests\NHibernateLayerTests.csproj">
+			<Name>NHibernateLayerTests</Name>
+			<Project>{29108E7B-4E72-4EE7-A7F8-ED9D0599446B}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\RepoInfrastructure\RepoInfrastructure.csproj">
+			<Name>RepoInfrastructure</Name>
+			<Project>{FA5943C4-C0EE-4AC2-82D6-A27E6E36A1CE}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
@@ -66,7 +68,7 @@ namespace AutoRepair.UI.WinForms.Forms.Vehicle
 
         private void LoadModels(int vehicleModelSelected = 0)
         {
-            var vehicleModelsByMakeId = _vehicleModelManagementService.GetVehicleModelsByMake((int)cmbMake.EditValue);
+            var vehicleModelsByMakeId = _vehicleModelManagementService.GetVehicleModelsByMake((int) cmbMake.EditValue).Select(models=>new {models.Id, models.Name});
             ComponentFiller.FillLookUpEdit(cmbModel).Data(vehicleModelsByMakeId, "Name", "Id", vehicleModelSelected);
 
         }

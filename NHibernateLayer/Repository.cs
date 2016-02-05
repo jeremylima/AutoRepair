@@ -44,9 +44,16 @@ namespace AutoRepair.DataAccess.NHibernate
 
         public bool Update(T entity)
         {
-            SessionHandler.Update(entity);
 
-           return true;
+            SessionHandler.Update(entity);
+            return true;
+        }
+
+        public bool Merge(T entity)
+        {
+
+            SessionHandler.Merge(entity);
+            return true;
         }
 
         public bool Update(IEnumerable<T> entities)

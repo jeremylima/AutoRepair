@@ -10,6 +10,7 @@ namespace AutoRepair.DataAccess.Infrastructure
         bool Add(IEnumerable<TEntity> items);
 		bool Update(TEntity entity);
         bool Update(IEnumerable<TEntity> entities);
+        bool Merge(TEntity entity);
         bool Delete(TEntity entity);
 		bool Delete(IEnumerable<TEntity> entities);
 	}

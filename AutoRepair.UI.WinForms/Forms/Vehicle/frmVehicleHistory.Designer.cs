@@ -160,6 +160,7 @@
             this.viewWorkOrders.OptionsView.AllowHtmlDrawHeaders = true;
             this.viewWorkOrders.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.viewWorkOrders.OptionsView.RowAutoHeight = true;
+            this.viewWorkOrders.OptionsView.ShowAutoFilterRow = true;
             // 
             // colOrderId
             // 

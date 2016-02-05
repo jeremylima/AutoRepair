@@ -35,6 +35,13 @@ namespace AutoRepair.DataAccess.NHibernate
             Flush();
         }
 
+        public static void Merge(object entity)
+        {
+            Clear();
+            Session.Merge(entity);
+            Flush();
+        }
+
         public static void Detele(object entity)
         {
             Clear();
