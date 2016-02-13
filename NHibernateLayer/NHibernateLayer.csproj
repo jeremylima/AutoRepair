@@ -69,6 +69,7 @@
     <Compile Include="Maps\ProductMap.cs" />
     <Compile Include="Maps\ServiceCostMap.cs" />
     <Compile Include="Maps\TransmissionTypeMap.cs" />
+    <Compile Include="Maps\UserMap.cs" />
     <Compile Include="Maps\VehicleMakeMap.cs" />
     <Compile Include="Maps\VehicleMap.cs" />
     <Compile Include="Maps\VehicleModelMap.cs" />

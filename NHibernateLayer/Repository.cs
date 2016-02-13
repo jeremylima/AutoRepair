@@ -119,7 +119,7 @@ namespace AutoRepair.DataAccess.NHibernate
 
         public T FindBy(System.Linq.Expressions.Expression<System.Func<T, bool>> expression)
         {
-            return FilterBy(expression).Single();
+            return FilterBy(expression).FirstOrDefault();
         }
 
         public IQueryable<T> FilterBy(System.Linq.Expressions.Expression<System.Func<T, bool>> expression)

@@ -14,6 +14,7 @@ namespace AutoRepair.DataAccess.NHibernate.Maps
             Map(x => x.Status);
             References(x => x.Client).Column("ClientId").Not.Nullable();
             References(x => x.Vehicle).Column("VehicleId").Not.Nullable();
+            References(x => x.User).Column("UserId").Not.Nullable();
             HasMany(x => x.ServiceCosts).KeyColumn("WorkOrderId").Cascade.All();
             HasMany(x => x.WorkOrderDetails).KeyColumn("WorkOrderId").Cascade.All();
         }

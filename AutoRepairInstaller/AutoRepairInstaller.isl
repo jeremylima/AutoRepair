@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject/>
+		<subject></subject>
 		<author>##ID_STRING2##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -2748,7 +2748,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>JLDevelopment</td><td>0</td><td/><td>690235663</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>JLDevelopment</td><td>0</td><td/><td>690281071</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>690233455</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>690233455</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Requiere .NET Framework 4.5</td><td>0</td><td/><td>690272367</td></row>
@@ -3851,8 +3851,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>690233455</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>690233455</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>690233455</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.JLDevelopment.com</td><td>0</td><td/><td>690235663</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>JLDevelopment</td><td>0</td><td/><td>690235663</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.JLDevelopment.com</td><td>0</td><td/><td>690281071</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>JLDevelopment</td><td>0</td><td/><td>690281071</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>AutoRepair</td><td>0</td><td/><td>690227503</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>690233455</td></row>
 	</table>
@@ -4103,7 +4103,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{10FBB2C6-F49C-4C76-91CC-7D075090F328}</td></row>
 		<row><td>ISUSSignature</td><td>{2F8A649E-1CDF-4584-9075-1F078E069B7B}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>

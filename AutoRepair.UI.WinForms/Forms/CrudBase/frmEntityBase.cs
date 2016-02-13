@@ -9,7 +9,7 @@ namespace AutoRepair.UI.WinForms.Forms.CrudBase
             InitializeComponent();
             Text = formTitle;
         }
-
+        
         public override sealed string Text
         {
             get { return base.Text; }

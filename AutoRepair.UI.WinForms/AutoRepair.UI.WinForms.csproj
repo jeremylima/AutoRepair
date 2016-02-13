@@ -82,8 +82,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commons\ComponentFiller.cs" />
+    <Compile Include="Commons\Helper.cs" />
     <Compile Include="Commons\Notifier.cs" />
     <Compile Include="Commons\Utils.cs" />
+    <Compile Include="Commons\Validator.cs" />
     <Compile Include="Forms\Client\frmClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +144,27 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\GeneralCruds\frmTransmissionTypeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\frmUserManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\GeneralCruds\frmVehicleMake.cs">
@@ -232,11 +255,20 @@
     <EmbeddedResource Include="Forms\frmEntityFinder.resx">
       <DependentUpon>frmEntityFinder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmProductManagement.resx">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleModel\frmVehicleModel.resx">
       <DependentUpon>frmVehicleModel.cs</DependentUpon>
@@ -259,6 +291,7 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -270,6 +303,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\AutoRepair.Business.Models.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -285,6 +319,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\carLogin.png" />
     <Content Include="Resources\Images\1450225836_customers.png" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
@@ -292,6 +327,10 @@
     <ProjectReference Include="..\AutoRepair.Business\AutoRepair.Business.csproj">
       <Project>{08be9ff3-224e-445b-969a-a60761e63436}</Project>
       <Name>AutoRepair.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomExceptions\CustomExceptions.csproj">
+      <Project>{05c63440-f211-4bc4-b394-5c9468b16a91}</Project>
+      <Name>CustomExceptions</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTOS\DTOS.csproj">
       <Project>{ffc1e5d1-577b-4c78-8790-c4927b3003f3}</Project>

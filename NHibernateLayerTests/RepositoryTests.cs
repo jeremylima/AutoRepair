@@ -176,6 +176,15 @@ namespace NHibernateLayerTests
 
         }
 
+        [Fact]
+        public void Get_All_Users()
+        {
+            var helper = new NHibernateHelper(_connectionString);
+            var repository = new Repository<User>(helper.SessionFactory);
+            var users = repository.All().ToList();
+            users.Count().Should().BeGreaterThan(0);
+        }
+
         private string GetDescriptionRandomly()
         {
             var descriptions = new List<string>

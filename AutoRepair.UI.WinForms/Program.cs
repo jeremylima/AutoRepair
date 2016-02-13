@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using AutoRepair.Business.Mappings;
 using AutoRepair.UI.Ninject;
+using AutoRepair.UI.WinForms.Commons;
+using AutoRepair.UI.WinForms.Forms.Login;
 
 namespace AutoRepair.UI.WinForms
 {
@@ -19,7 +21,21 @@ namespace AutoRepair.UI.WinForms
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(CompositionRoot.Resolve<Menu>());
+
+
+            var frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
+            if (frmLogin.User != null)
+            {
+                Helper.User = frmLogin.User;
+                Application.Run(new Menu());
+            }
+            else
+            {
+                Application.Exit();
+            }
+
+            //Application.Run(CompositionRoot.Resolve<frmLogin>());
 
         }
     }

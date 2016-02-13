@@ -21,6 +21,19 @@ namespace AutoRepair.Business.Mappings
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Color, Color>().ReverseMap();
 
+            AutoMapper.Mapper.CreateMap<DataAccess.Entities.User, User>()
+                .ForMember(dest => dest.Password,
+                    opts => opts.Ignore())
+                ;
+
+            AutoMapper.Mapper.CreateMap<User,DataAccess.Entities.User>()
+                .ForMember(dest => dest.Hash,
+                    opts => opts.Ignore())
+                .ForMember(dest => dest.Salt,
+                    opts => opts.Ignore())
+                ;
+
+
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.MotorType, MotorType>().ReverseMap();
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.VehicleType, VehicleType>().ReverseMap();
@@ -111,6 +124,8 @@ namespace AutoRepair.Business.Mappings
                     opts => opts.MapFrom(src => src.Client.FirstName + " " + src.Client.LastName))
                 .ForMember(dest => dest.VehicleDescription,
                     opts => opts.MapFrom(src =>src.Vehicle.Model.VehicleMake.Name + " " + src.Vehicle.Model.Name + " " + src.Vehicle.Type.Name + " " + src.Vehicle.Color.Name + " - " + src.Vehicle.LicensePlate))
+                .ForMember(dest => dest.User,
+                    opts => opts.MapFrom(src => src.User.Name))
                 ;
 
 

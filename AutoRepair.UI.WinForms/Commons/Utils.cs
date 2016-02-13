@@ -23,7 +23,8 @@ namespace AutoRepair.UI.WinForms.Commons
         public static string TransmissionTypes => "Tipos de Transmision de Vehiculos";
         public static string ProductMake => "Marca de Producto";
         public static string ProductMakes => "Marcas de Productos";
-        
+        public static string Users => "Usuarios del Sistema";
+        public static string User => "Usuario del Sistema";
     }
 
     public class Utils

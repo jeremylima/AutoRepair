@@ -25,6 +25,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         public IVehicleManagementService _vehicleManagementService;
         public IWorkOrderManagementService _workOrderManagementService;
         public IProductManagementService _productManagementService;
+        public IUserManagementService _userManagementService;
 
         public int _vehicleId;
         public Business.Models.Client _client;
@@ -37,6 +38,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             _vehicleManagementService = CompositionRoot.Resolve<IVehicleManagementService>();
             _workOrderManagementService = CompositionRoot.Resolve<IWorkOrderManagementService>();
             _productManagementService = CompositionRoot.Resolve<IProductManagementService>();
+            _userManagementService = CompositionRoot.Resolve<IUserManagementService>();
 
             InitializeComponent();
         }
@@ -45,9 +47,6 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         {
             LoadInitValues();
 
-            
-            
-
             if (_workOrder != null)
             {
                 var detailsConsult = AutoMapper.Mapper.Map<IList<WorkOrderDetail>, IList<WorkOrderDetailConsult>>(_workOrder.WorkOrderDetails);
@@ -55,7 +54,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 _workOrderBinding.WorkOrderDetails = new BindingList<WorkOrderDetailConsult>(detailsConsult);
                 LoadClient(_workOrder.Client);
                 LoadVehicle(AutoMapper.Mapper.Map<Business.Models.Vehicle, VehicleConsult>(_workOrder.Vehicle));
-                
+                LoadUser(_workOrder.User.Id);
                 LoadStatus(_workOrder.Status);
                 lbOrderId.Text = _workOrder.Id.ToString();
                 dateEdit.EditValue = _workOrder.Date;
@@ -70,6 +69,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 lbOrderId.Text = @"New";
                 dateEdit.EditValue = DateTime.Now.Date;
                 LoadStatus();
+                LoadUser();
             }
 
             LoadDetails();
@@ -89,7 +89,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 deleteDetail.Visible = false;
                 viewServiceCosts.OptionsBehavior.Editable = false;
                 viewDetails.OptionsBehavior.Editable = false;
-
+                cmbUser.Properties.ReadOnly = true;
 
             }
 
@@ -117,6 +117,12 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         {
             cmbStatus.Properties.DataSource = Enum.GetNames(typeof(WorkOrderStatus));
             cmbStatus.EditValue = statusSelected.ToString();
+        }
+
+        private void LoadUser(int userSelected = 0)
+        {
+            var users = _userManagementService.GetAllActiveUsers().Select(models => new { models.Id, models.Name });
+            ComponentFiller.FillLookUpEdit(cmbUser).Data(users, "Name", "Id", userSelected);
         }
 
         private void gvClient_DoubleClick(object sender, EventArgs e)
@@ -191,6 +197,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             {
                 _workOrder.Client = _client;
                 _workOrder.Vehicle = _vehicleManagementService.GetVehicle(_vehicleId);
+                _workOrder.User = _userManagementService.GetUser((int)cmbUser.EditValue);
                 _workOrder.Date = (DateTime) dateEdit.EditValue;
                 _workOrder.Description = txtDescription.Text;
                 _workOrder.Status = WorkOrderStatus.Open;
@@ -206,6 +213,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 {
                     Client = _client,
                     Vehicle = _vehicleManagementService.GetVehicle(_vehicleId),
+                    User = _userManagementService.GetUser((int)cmbUser.EditValue),
                     Date = (DateTime) dateEdit.EditValue,
                     Description = txtDescription.Text,
                     Status = WorkOrderStatus.Open,

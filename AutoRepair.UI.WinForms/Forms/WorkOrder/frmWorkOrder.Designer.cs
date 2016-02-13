@@ -32,8 +32,8 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkOrder));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -82,6 +82,8 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.cmbUser = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardView1)).BeginInit();
@@ -103,6 +105,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbUser.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -290,7 +293,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // 
             this.btnDeleteDetail.AutoHeight = false;
             this.btnDeleteDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
             this.btnDeleteDetail.Name = "btnDeleteDetail";
             this.btnDeleteDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteDetail.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteDetail_ButtonClick);
@@ -423,7 +426,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // 
             this.btnDeleteServiceCost.AutoHeight = false;
             this.btnDeleteServiceCost.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteServiceCost.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteServiceCost.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
             this.btnDeleteServiceCost.Name = "btnDeleteServiceCost";
             this.btnDeleteServiceCost.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteServiceCost.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteServiceCost_ButtonClick);
@@ -501,7 +504,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Location = new System.Drawing.Point(518, 166);
+            this.labelControl4.Location = new System.Drawing.Point(412, 167);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(41, 13);
             this.labelControl4.TabIndex = 10;
@@ -510,7 +513,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.labelControl5.Location = new System.Drawing.Point(787, 164);
+            this.labelControl5.Location = new System.Drawing.Point(832, 164);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(70, 33);
             this.labelControl5.TabIndex = 11;
@@ -535,24 +538,24 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit.Size = new System.Drawing.Size(163, 20);
+            this.dateEdit.Size = new System.Drawing.Size(87, 20);
             this.dateEdit.TabIndex = 13;
             // 
             // cmbStatus
             // 
-            this.cmbStatus.Location = new System.Drawing.Point(565, 162);
+            this.cmbStatus.Location = new System.Drawing.Point(459, 163);
             this.cmbStatus.MenuManager = this.ribbonControl1;
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbStatus.Properties.ReadOnly = true;
-            this.cmbStatus.Size = new System.Drawing.Size(163, 20);
+            this.cmbStatus.Size = new System.Drawing.Size(81, 20);
             this.cmbStatus.TabIndex = 16;
             // 
             // txtTotal
             // 
             this.txtTotal.EditValue = "0";
-            this.txtTotal.Location = new System.Drawing.Point(863, 161);
+            this.txtTotal.Location = new System.Drawing.Point(908, 161);
             this.txtTotal.MenuManager = this.ribbonControl1;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
@@ -566,7 +569,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.txtTotal.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTotal.Properties.ReadOnly = true;
             this.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTotal.Size = new System.Drawing.Size(257, 40);
+            this.txtTotal.Size = new System.Drawing.Size(212, 40);
             this.txtTotal.TabIndex = 15;
             this.txtTotal.TabStop = false;
             // 
@@ -634,11 +637,32 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.barDockControlRight.Location = new System.Drawing.Point(1137, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 788);
             // 
+            // cmbUser
+            // 
+            this.cmbUser.Location = new System.Drawing.Point(634, 163);
+            this.cmbUser.MenuManager = this.ribbonControl1;
+            this.cmbUser.Name = "cmbUser";
+            this.cmbUser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbUser.Size = new System.Drawing.Size(182, 20);
+            this.cmbUser.TabIndex = 23;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl6.Location = new System.Drawing.Point(561, 167);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(66, 13);
+            this.labelControl6.TabIndex = 22;
+            this.labelControl6.Text = "Asignado A:";
+            // 
             // frmWorkOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 788);
+            this.Controls.Add(this.cmbUser);
+            this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.dateEdit);
@@ -683,6 +707,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbUser.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -738,5 +763,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         private DevExpress.XtraGrid.Columns.GridColumn Code;
         private DevExpress.XtraGrid.Columns.GridColumn CostPrice;
         private DevExpress.XtraBars.BarButtonItem btnSaveAndFinalize;
+        private DevExpress.XtraEditors.LookUpEdit cmbUser;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
     }
 }

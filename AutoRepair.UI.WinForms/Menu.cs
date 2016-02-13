@@ -2,6 +2,7 @@
 using AutoRepair.UI.WinForms.Forms.Client;
 using AutoRepair.UI.WinForms.Forms.GeneralCruds;
 using AutoRepair.UI.WinForms.Forms.Product;
+using AutoRepair.UI.WinForms.Forms.User;
 using AutoRepair.UI.WinForms.Forms.Vehicle;
 using AutoRepair.UI.WinForms.Forms.WorkOrder;
 
@@ -85,6 +86,24 @@ namespace AutoRepair.UI.WinForms
         {
             var vehicleModels = new frmVehicleModelManagement(FormName.VehicleModels);
             vehicleModels.ShowDialog();
+        }
+
+        private void btnUsers_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var users = new frmUserManagement(FormName.Users);
+            users.ShowDialog();
+        }
+
+        private void Menu_Load(object sender, System.EventArgs e)
+        {
+            lbUserNameStatusBar.Caption = Commons.Helper.User.Name;
+            lbUserTypeStatusBar.Caption = Commons.Helper.User.Type.ToString();
+        }
+
+        private void btnChangePassword_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmChangePassword = new frmChangePassword();
+            frmChangePassword.ShowDialog();
         }
     }
 }

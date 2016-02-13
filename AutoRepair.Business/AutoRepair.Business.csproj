@@ -59,6 +59,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -78,6 +79,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ServiceCost.cs" />
     <Compile Include="Models\TransmissionType.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\VehicleMake.cs" />
     <Compile Include="Models\VehicleModel.cs" />
@@ -88,22 +90,28 @@
     <Compile Include="Services\CategoryManagementService.cs" />
     <Compile Include="Services\ClientManagementService.cs" />
     <Compile Include="Services\ColorManagementService.cs" />
+    <Compile Include="Services\Encrypter.cs" />
     <Compile Include="Services\ICategoryManagementService.cs" />
     <Compile Include="Services\IClientManagementService.cs" />
     <Compile Include="Services\IColorManagementService.cs" />
+    <Compile Include="Services\IEncrypter.cs" />
+    <Compile Include="Services\ILoginManagementService.cs" />
     <Compile Include="Services\IMakeManagementService.cs" />
     <Compile Include="Services\IMotorTypeManagementService.cs" />
     <Compile Include="Services\IProductManagementService.cs" />
     <Compile Include="Services\ITransmissionTypeManagementService.cs" />
+    <Compile Include="Services\IUserManagementService.cs" />
     <Compile Include="Services\IVehicleMakeManagementService.cs" />
     <Compile Include="Services\IVehicleManagementService.cs" />
     <Compile Include="Services\IVehicleModelManagementService.cs" />
     <Compile Include="Services\IVehicleTypeManagementService.cs" />
     <Compile Include="Services\IWorkOrderManagementService.cs" />
+    <Compile Include="Services\LoginManagementService.cs" />
     <Compile Include="Services\MakeManagementService.cs" />
     <Compile Include="Services\MotorTypeManagementService.cs" />
     <Compile Include="Services\ProductManagementService.cs" />
     <Compile Include="Services\TransmissionTypeManagementService.cs" />
+    <Compile Include="Services\UserManagementService.cs" />
     <Compile Include="Services\VehicleMakeManagementService.cs" />
     <Compile Include="Services\VehicleManagementService.cs" />
     <Compile Include="Services\VehicleModelManagementService.cs" />
@@ -116,6 +124,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CustomExceptions\CustomExceptions.csproj">
+      <Project>{05c63440-f211-4bc4-b394-5c9468b16a91}</Project>
+      <Name>CustomExceptions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTOS\DTOS.csproj">
       <Project>{ffc1e5d1-577b-4c78-8790-c4927b3003f3}</Project>
       <Name>DTOS</Name>

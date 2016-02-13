@@ -92,6 +92,16 @@ namespace AutoRepair.UI.Ninject
             Bind<IWorkOrderManagementService>().To<WorkOrderManagementService>()
             .InTransientScope();
 
+            Bind<IIntKeyedRepository<User>>().To<Repository<User>>()
+            .InTransientScope();
+            Bind<IUserManagementService>().To<UserManagementService>()
+            .InTransientScope();
+
+            Bind<ILoginManagementService>().To<LoginManagementService>()
+            .InTransientScope();
+
+            Bind<IEncrypter>().To<Encrypter>()
+            .InTransientScope();
         }
     }
 

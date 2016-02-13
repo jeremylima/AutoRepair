@@ -50,6 +50,7 @@
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUser = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryRadioButtonViewTypeOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvWorkOrderList)).BeginInit();
@@ -198,7 +199,8 @@
             this.colVehicle,
             this.colDescription,
             this.colDate,
-            this.colStatus});
+            this.colStatus,
+            this.colUser});
             this.gridView1.GridControl = this.gvWorkOrderList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsCustomization.AllowRowSizing = true;
@@ -264,6 +266,14 @@
             this.colStatus.VisibleIndex = 5;
             this.colStatus.Width = 81;
             // 
+            // colUser
+            // 
+            this.colUser.Caption = "Asignado A";
+            this.colUser.FieldName = "User";
+            this.colUser.Name = "colUser";
+            this.colUser.Visible = true;
+            this.colUser.VisibleIndex = 6;
+            // 
             // frmWorkOrderManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,5 +320,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn colDate;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colUser;
     }
 }

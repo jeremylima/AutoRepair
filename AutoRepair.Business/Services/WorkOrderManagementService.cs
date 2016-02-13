@@ -59,6 +59,7 @@ namespace AutoRepair.Business.Services
                 Description = _workOrderMap.Description,
                 Status = _workOrderMap.Status,
                 Vehicle = _workOrderMap.Vehicle,
+                User = _workOrderMap.User
             });
 
             var _workOrder = _workOrderRepository.FindBy(workOrderIdCreated);
