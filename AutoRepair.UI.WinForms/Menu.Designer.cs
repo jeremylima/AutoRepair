@@ -45,12 +45,14 @@
             this.btnTransmissionTypes = new DevExpress.XtraBars.BarButtonItem();
             this.btnUsers = new DevExpress.XtraBars.BarButtonItem();
             this.btnChangePassword = new DevExpress.XtraBars.BarButtonItem();
+            this.btnReportByUser = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupAdmin = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -90,9 +92,10 @@
             this.btnServiceOrders,
             this.btnTransmissionTypes,
             this.btnUsers,
-            this.btnChangePassword});
+            this.btnChangePassword,
+            this.btnReportByUser});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.MaxItemId = 16;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -226,6 +229,15 @@
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChangePassword_ItemClick);
             // 
+            // btnReportByUser
+            // 
+            this.btnReportByUser.Caption = "Reporte por usuario";
+            this.btnReportByUser.Glyph = ((System.Drawing.Image)(resources.GetObject("btnReportByUser.Glyph")));
+            this.btnReportByUser.Id = 15;
+            this.btnReportByUser.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnReportByUser.LargeGlyph")));
+            this.btnReportByUser.Name = "btnReportByUser";
+            this.btnReportByUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReportByUser_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -233,7 +245,8 @@
             this.ribbonPageGroup2,
             this.ribbonPageGroup3,
             this.ribbonPageGroup6,
-            this.ribbonPageGroup7});
+            this.ribbonPageGroup7,
+            this.ribbonPageGroupAdmin});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Menu Principal";
             // 
@@ -259,9 +272,16 @@
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.btnUsers);
             this.ribbonPageGroup7.ItemLinks.Add(this.btnChangePassword);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            // 
+            // ribbonPageGroupAdmin
+            // 
+            this.ribbonPageGroupAdmin.AllowTextClipping = false;
+            this.ribbonPageGroupAdmin.ItemLinks.Add(this.btnUsers);
+            this.ribbonPageGroupAdmin.ItemLinks.Add(this.btnReportByUser);
+            this.ribbonPageGroupAdmin.Name = "ribbonPageGroupAdmin";
+            this.ribbonPageGroupAdmin.Text = "Uso Exclusivo Administrador";
             // 
             // ribbonPage2
             // 
@@ -455,5 +475,7 @@
         private DevExpress.XtraBars.BarStaticItem lbUserTypeStatusBar;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.XtraBars.BarButtonItem btnReportByUser;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupAdmin;
     }
 }

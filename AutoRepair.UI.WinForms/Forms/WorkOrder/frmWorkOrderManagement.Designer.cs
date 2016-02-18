@@ -49,6 +49,7 @@
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFinalizedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUser = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -199,6 +200,7 @@
             this.colVehicle,
             this.colDescription,
             this.colDate,
+            this.colFinalizedDate,
             this.colStatus,
             this.colUser});
             this.gridView1.GridControl = this.gvWorkOrderList;
@@ -214,7 +216,7 @@
             this.colId.Name = "colId";
             this.colId.Visible = true;
             this.colId.VisibleIndex = 0;
-            this.colId.Width = 49;
+            this.colId.Width = 42;
             // 
             // colClientName
             // 
@@ -223,7 +225,7 @@
             this.colClientName.Name = "colClientName";
             this.colClientName.Visible = true;
             this.colClientName.VisibleIndex = 1;
-            this.colClientName.Width = 217;
+            this.colClientName.Width = 167;
             // 
             // colVehicle
             // 
@@ -232,7 +234,7 @@
             this.colVehicle.Name = "colVehicle";
             this.colVehicle.Visible = true;
             this.colVehicle.VisibleIndex = 2;
-            this.colVehicle.Width = 175;
+            this.colVehicle.Width = 129;
             // 
             // colDescription
             // 
@@ -242,7 +244,7 @@
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
             this.colDescription.VisibleIndex = 3;
-            this.colDescription.Width = 334;
+            this.colDescription.Width = 308;
             // 
             // repositoryItemMemoEdit1
             // 
@@ -255,7 +257,18 @@
             this.colDate.Name = "colDate";
             this.colDate.Visible = true;
             this.colDate.VisibleIndex = 4;
-            this.colDate.Width = 116;
+            this.colDate.Width = 95;
+            // 
+            // colFinalizedDate
+            // 
+            this.colFinalizedDate.Caption = "Fecha de Finalizacion";
+            this.colFinalizedDate.DisplayFormat.FormatString = "d";
+            this.colFinalizedDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colFinalizedDate.FieldName = "FinalizedDate";
+            this.colFinalizedDate.Name = "colFinalizedDate";
+            this.colFinalizedDate.Visible = true;
+            this.colFinalizedDate.VisibleIndex = 5;
+            this.colFinalizedDate.Width = 117;
             // 
             // colStatus
             // 
@@ -263,8 +276,8 @@
             this.colStatus.FieldName = "Status";
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
-            this.colStatus.VisibleIndex = 5;
-            this.colStatus.Width = 81;
+            this.colStatus.VisibleIndex = 6;
+            this.colStatus.Width = 53;
             // 
             // colUser
             // 
@@ -272,7 +285,8 @@
             this.colUser.FieldName = "User";
             this.colUser.Name = "colUser";
             this.colUser.Visible = true;
-            this.colUser.VisibleIndex = 6;
+            this.colUser.VisibleIndex = 7;
+            this.colUser.Width = 61;
             // 
             // frmWorkOrderManagement
             // 
@@ -321,5 +335,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDate;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus;
         private DevExpress.XtraGrid.Columns.GridColumn colUser;
+        private DevExpress.XtraGrid.Columns.GridColumn colFinalizedDate;
     }
 }

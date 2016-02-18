@@ -72,7 +72,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.lbOrderId = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditEntryDate = new DevExpress.XtraEditors.DateEdit();
             this.cmbStatus = new DevExpress.XtraEditors.LookUpEdit();
             this.txtTotal = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -84,6 +84,8 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.cmbUser = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.dateEditLeaveDate = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardView1)).BeginInit();
@@ -100,12 +102,14 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteServiceCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditEntryDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditEntryDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbUser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditLeaveDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditLeaveDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -495,16 +499,16 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Location = new System.Drawing.Point(261, 166);
+            this.labelControl3.Location = new System.Drawing.Point(274, 152);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(36, 13);
+            this.labelControl3.Size = new System.Drawing.Size(59, 13);
             this.labelControl3.TabIndex = 9;
-            this.labelControl3.Text = "Fecha:";
+            this.labelControl3.Text = "F. Ingreso:";
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Location = new System.Drawing.Point(412, 167);
+            this.labelControl4.Location = new System.Drawing.Point(461, 153);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(41, 13);
             this.labelControl4.TabIndex = 10;
@@ -513,7 +517,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.labelControl5.Location = new System.Drawing.Point(832, 164);
+            this.labelControl5.Location = new System.Drawing.Point(841, 150);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(70, 33);
             this.labelControl5.TabIndex = 11;
@@ -528,22 +532,22 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.lbOrderId.TabIndex = 12;
             this.lbOrderId.Text = "No. Orden";
             // 
-            // dateEdit
+            // dateEditEntryDate
             // 
-            this.dateEdit.EditValue = null;
-            this.dateEdit.Location = new System.Drawing.Point(303, 163);
-            this.dateEdit.MenuManager = this.ribbonControl1;
-            this.dateEdit.Name = "dateEdit";
-            this.dateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditEntryDate.EditValue = null;
+            this.dateEditEntryDate.Location = new System.Drawing.Point(360, 149);
+            this.dateEditEntryDate.MenuManager = this.ribbonControl1;
+            this.dateEditEntryDate.Name = "dateEditEntryDate";
+            this.dateEditEntryDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditEntryDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit.Size = new System.Drawing.Size(87, 20);
-            this.dateEdit.TabIndex = 13;
+            this.dateEditEntryDate.Size = new System.Drawing.Size(98, 20);
+            this.dateEditEntryDate.TabIndex = 13;
             // 
             // cmbStatus
             // 
-            this.cmbStatus.Location = new System.Drawing.Point(459, 163);
+            this.cmbStatus.Location = new System.Drawing.Point(508, 149);
             this.cmbStatus.MenuManager = this.ribbonControl1;
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -555,7 +559,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // txtTotal
             // 
             this.txtTotal.EditValue = "0";
-            this.txtTotal.Location = new System.Drawing.Point(908, 161);
+            this.txtTotal.Location = new System.Drawing.Point(917, 147);
             this.txtTotal.MenuManager = this.ribbonControl1;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
@@ -569,7 +573,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             this.txtTotal.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTotal.Properties.ReadOnly = true;
             this.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTotal.Size = new System.Drawing.Size(212, 40);
+            this.txtTotal.Size = new System.Drawing.Size(203, 40);
             this.txtTotal.TabIndex = 15;
             this.txtTotal.TabStop = false;
             // 
@@ -639,33 +643,58 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             // 
             // cmbUser
             // 
-            this.cmbUser.Location = new System.Drawing.Point(634, 163);
+            this.cmbUser.Location = new System.Drawing.Point(668, 149);
             this.cmbUser.MenuManager = this.ribbonControl1;
             this.cmbUser.Name = "cmbUser";
             this.cmbUser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbUser.Size = new System.Drawing.Size(182, 20);
+            this.cmbUser.Size = new System.Drawing.Size(147, 20);
             this.cmbUser.TabIndex = 23;
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl6.Location = new System.Drawing.Point(561, 167);
+            this.labelControl6.Location = new System.Drawing.Point(595, 153);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(66, 13);
             this.labelControl6.TabIndex = 22;
             this.labelControl6.Text = "Asignado A:";
+            // 
+            // dateEditLeaveDate
+            // 
+            this.dateEditLeaveDate.EditValue = null;
+            this.dateEditLeaveDate.Enabled = false;
+            this.dateEditLeaveDate.Location = new System.Drawing.Point(360, 175);
+            this.dateEditLeaveDate.MenuManager = this.ribbonControl1;
+            this.dateEditLeaveDate.Name = "dateEditLeaveDate";
+            this.dateEditLeaveDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditLeaveDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditLeaveDate.Size = new System.Drawing.Size(98, 20);
+            this.dateEditLeaveDate.TabIndex = 30;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl7.Location = new System.Drawing.Point(274, 178);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(80, 13);
+            this.labelControl7.TabIndex = 29;
+            this.labelControl7.Text = "F. Finalizacion:";
             // 
             // frmWorkOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 788);
+            this.Controls.Add(this.dateEditLeaveDate);
+            this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.cmbUser);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.dateEdit);
+            this.Controls.Add(this.dateEditEntryDate);
             this.Controls.Add(this.lbOrderId);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
@@ -702,12 +731,14 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteServiceCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditEntryDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditEntryDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbUser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditLeaveDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditLeaveDate.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -733,7 +764,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl lbOrderId;
-        private DevExpress.XtraEditors.DateEdit dateEdit;
+        private DevExpress.XtraEditors.DateEdit dateEditEntryDate;
         private DevExpress.XtraEditors.LookUpEdit cmbStatus;
         private DevExpress.XtraGrid.GridControl gvDetails;
         private DevExpress.XtraGrid.Views.Grid.GridView viewDetails;
@@ -765,5 +796,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
         private DevExpress.XtraBars.BarButtonItem btnSaveAndFinalize;
         private DevExpress.XtraEditors.LookUpEdit cmbUser;
         private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.DateEdit dateEditLeaveDate;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

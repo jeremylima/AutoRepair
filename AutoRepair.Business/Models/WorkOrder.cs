@@ -13,6 +13,7 @@ namespace AutoRepair.Business.Models
         public virtual string Description { get; set; }
         public virtual WorkOrderStatus Status { get; set; }
         public virtual DateTime Date { get; set; }
+        public virtual DateTime? FinalizedDate { get; set; }
         public virtual Client Client { get; set; }
         public virtual Vehicle Vehicle { get; set; }
         public virtual User User { get; set; }
@@ -28,8 +29,26 @@ namespace AutoRepair.Business.Models
         public virtual string VehicleDescription { get; set; }
         public virtual string Description { get; set; }
         public virtual DateTime Date { get; set; }
+        public virtual DateTime FinalizedDate { get; set; }
         public virtual string Status { get; set; }
         public virtual string User { get; set; }
+
+    }
+
+
+    public class WorkOrderByUserDetailsConsult
+    {
+        public virtual int Id { get; set; }
+        public virtual string Description { get; set; }
+        public virtual WorkOrderStatus Status { get; set; }
+        public virtual DateTime Date { get; set; }
+
+        public virtual DateTime FinalizedDate { get; set; }
+        public virtual Client Client { get; set; }
+        public virtual IList<VehicleConsult> Vehicle { get; set; }
+        public virtual User User { get; set; }
+        /*public virtual BindingList<WorkOrderDetail> WorkOrderDetails { get; set; }
+        public virtual BindingList<ServiceCostByUser> ServiceCosts { get; set; }*/
 
     }
 
@@ -38,6 +57,7 @@ namespace AutoRepair.Business.Models
         public virtual int OrderId { get; set; }
         public virtual DateTime Date { get; set; }
         public virtual string Description { get; set; }
+        public virtual string UserName { get; set; }
         public virtual BindingList<WorkOrderDetailConsult> WorkOrderDetails { get; set; }
         public virtual BindingList<ServiceCost> ServiceCosts { get; set; }
 

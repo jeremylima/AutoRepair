@@ -57,7 +57,8 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 LoadUser(_workOrder.User.Id);
                 LoadStatus(_workOrder.Status);
                 lbOrderId.Text = _workOrder.Id.ToString();
-                dateEdit.EditValue = _workOrder.Date;
+                dateEditEntryDate.EditValue = _workOrder.Date;
+                dateEditLeaveDate.EditValue = _workOrder.FinalizedDate;
                 txtDescription.Text = _workOrder.Description;
                 
             }
@@ -67,7 +68,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 _workOrderBinding.WorkOrderDetails = new BindingList<WorkOrderDetailConsult>();
 
                 lbOrderId.Text = @"New";
-                dateEdit.EditValue = DateTime.Now.Date;
+                dateEditEntryDate.EditValue = DateTime.Now.Date;
                 LoadStatus();
                 LoadUser();
             }
@@ -90,6 +91,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 viewServiceCosts.OptionsBehavior.Editable = false;
                 viewDetails.OptionsBehavior.Editable = false;
                 cmbUser.Properties.ReadOnly = true;
+                dateEditEntryDate.Properties.Enabled = false;
 
             }
 
@@ -198,7 +200,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 _workOrder.Client = _client;
                 _workOrder.Vehicle = _vehicleManagementService.GetVehicle(_vehicleId);
                 _workOrder.User = _userManagementService.GetUser((int)cmbUser.EditValue);
-                _workOrder.Date = (DateTime) dateEdit.EditValue;
+                _workOrder.Date = (DateTime) dateEditEntryDate.EditValue;
                 _workOrder.Description = txtDescription.Text;
                 _workOrder.Status = WorkOrderStatus.Open;
 
@@ -214,7 +216,7 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                     Client = _client,
                     Vehicle = _vehicleManagementService.GetVehicle(_vehicleId),
                     User = _userManagementService.GetUser((int)cmbUser.EditValue),
-                    Date = (DateTime) dateEdit.EditValue,
+                    Date = (DateTime) dateEditEntryDate.EditValue,
                     Description = txtDescription.Text,
                     Status = WorkOrderStatus.Open,
                     ServiceCosts = TransformServiceCostsBinding(),

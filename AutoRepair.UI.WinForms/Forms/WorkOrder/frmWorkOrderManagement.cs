@@ -21,14 +21,14 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
 
         private void LoadWorkOrders()
         {
-            var workOrders = _workOrderManagementService.GetAllWorkOrders();
+            var workOrders = _workOrderManagementService.GetAllWorkOrdersConsult();
             gvWorkOrderList.DataSource = workOrders;
             gridView1.BestFitColumns();
         }
 
         private void LoadWorkOrdersByStatus(WorkOrderStatus workOrderStatus)
         {
-            var workOrders = _workOrderManagementService.GetAllWorkOrdersByStatus(workOrderStatus);
+            var workOrders = _workOrderManagementService.GetAllWorkOrdersByStatusConsult(workOrderStatus);
             gvWorkOrderList.DataSource = workOrders;
             //gridView1.PopulateColumns();
          

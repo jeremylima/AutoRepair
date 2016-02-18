@@ -11,6 +11,7 @@ namespace AutoRepair.DataAccess.NHibernate.Maps
             Id(x => x.Id);
             Map(x => x.Description);
             Map(x => x.Date);
+            Map(x => x.FinalizedDate);
             Map(x => x.Status);
             References(x => x.Client).Column("ClientId").Not.Nullable();
             References(x => x.Vehicle).Column("VehicleId").Not.Nullable();

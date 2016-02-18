@@ -55,6 +55,7 @@
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.gvVehicle = new DevExpress.XtraGrid.GridControl();
             this.cardView2 = new DevExpress.XtraGrid.Views.Card.CardView();
+            this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.viewProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvWorkOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewServices)).BeginInit();
@@ -153,7 +154,8 @@
             this.viewWorkOrders.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colOrderId,
             this.colDate,
-            this.colWorkOrderDescription});
+            this.colWorkOrderDescription,
+            this.colUserName});
             this.viewWorkOrders.GridControl = this.gvWorkOrders;
             this.viewWorkOrders.Name = "viewWorkOrders";
             this.viewWorkOrders.OptionsCustomization.AllowRowSizing = true;
@@ -323,6 +325,14 @@
             this.cardView2.OptionsView.ShowHorzScrollBar = false;
             this.cardView2.OptionsView.ShowQuickCustomizeButton = false;
             // 
+            // colUserName
+            // 
+            this.colUserName.Caption = "Asignado a";
+            this.colUserName.FieldName = "UserName";
+            this.colUserName.Name = "colUserName";
+            this.colUserName.Visible = true;
+            this.colUserName.VisibleIndex = 3;
+            // 
             // frmVehicleHistory
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -378,5 +388,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colProductDescription;
         private DevExpress.XtraGrid.Columns.GridColumn colProductQuantity;
         private DevExpress.XtraGrid.Columns.GridColumn colServiceDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserName;
     }
 }

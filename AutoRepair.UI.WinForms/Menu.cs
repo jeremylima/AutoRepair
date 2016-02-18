@@ -1,4 +1,7 @@
-﻿using AutoRepair.UI.WinForms.Commons;
+﻿using System;
+using AutoRepair.DataAccess.Entities;
+using AutoRepair.UI.WinForms.Commons;
+using AutoRepair.UI.WinForms.Forms.Admin;
 using AutoRepair.UI.WinForms.Forms.Client;
 using AutoRepair.UI.WinForms.Forms.GeneralCruds;
 using AutoRepair.UI.WinForms.Forms.Product;
@@ -13,6 +16,21 @@ namespace AutoRepair.UI.WinForms
         public Menu()
         {
             InitializeComponent();
+            SetPermissionsByUserType(Commons.Helper.User.Type);
+        }
+
+        private void SetPermissionsByUserType(UserType userType)
+        {
+            switch (userType)
+            {
+                case UserType.Normal:
+                    ribbonPageGroupAdmin.Visible = false;
+                    break;
+                case UserType.Administrator:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(userType), userType, null);
+            }
         }
 
         private void btnClient_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -49,7 +67,6 @@ namespace AutoRepair.UI.WinForms
         {
             var categories = new frmCategoryManagement(FormName.Categories);
             categories.ShowDialog();
-
         }
 
         private void btnVehicleColors_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -104,6 +121,12 @@ namespace AutoRepair.UI.WinForms
         {
             var frmChangePassword = new frmChangePassword();
             frmChangePassword.ShowDialog();
+        }
+
+        private void btnReportByUser_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmReportByUser = new frmReportByUser();
+            frmReportByUser.ShowDialog();
         }
     }
 }

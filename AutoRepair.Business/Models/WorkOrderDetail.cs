@@ -20,4 +20,5 @@
         public virtual decimal Quantity { get; set; }
         public virtual decimal Total => SalePrice*Quantity;
     }
+
 }

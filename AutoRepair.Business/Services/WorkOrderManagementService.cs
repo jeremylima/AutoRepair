@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using AutoRepair.Business.Models;
 using AutoRepair.DataAccess.Entities;
 using AutoRepair.DataAccess.Infrastructure;
-using NHibernate.Transaction;
 using Product = AutoRepair.DataAccess.Entities.Product;
 using ServiceCost = AutoRepair.DataAccess.Entities.ServiceCost;
 using WorkOrder = AutoRepair.Business.Models.WorkOrder;
@@ -38,15 +36,25 @@ namespace AutoRepair.Business.Services
         }
 
 
-        public IEnumerable<WorkOrderConsult> GetAllWorkOrders()
+        public IEnumerable<WorkOrder> GetAllWorkOrders()
+        {
+            return _workOrderRepository.All().Select(AutoMapper.Mapper.Map<DataAccess.Entities.WorkOrder, WorkOrder>);
+        }
+
+        public IEnumerable<WorkOrderConsult> GetAllWorkOrdersConsult()
         {
             return _workOrderRepository.All().Select(AutoMapper.Mapper.Map<DataAccess.Entities.WorkOrder, WorkOrderConsult>);
         }
 
-        public IEnumerable<WorkOrderConsult> GetAllWorkOrdersByStatus(WorkOrderStatus workOrderStatus)
+        public IEnumerable<WorkOrderConsult> GetAllWorkOrdersByStatusConsult(WorkOrderStatus workOrderStatus)
         {
-            var a = _workOrderRepository.FilterBy(x => x.Status == workOrderStatus).Select(AutoMapper.Mapper.Map<DataAccess.Entities.WorkOrder, WorkOrderConsult>);
             return _workOrderRepository.FilterBy(x => x.Status == workOrderStatus).Select(AutoMapper.Mapper.Map<DataAccess.Entities.WorkOrder, WorkOrderConsult>); 
+        }
+
+        public IEnumerable<WorkOrder> GetAllWorkOrdersByStatusBetweenDatesPerUser(WorkOrderStatus workOrderStatus, DateTime initDate,
+            DateTime endDate, int userId)
+        {
+            return _workOrderRepository.FilterBy(x => x.Status == workOrderStatus && x.FinalizedDate.Value>=initDate.Date && x.FinalizedDate.Value<=endDate.Date && x.User.Id == userId).Select(AutoMapper.Mapper.Map<DataAccess.Entities.WorkOrder, WorkOrder>);
         }
 
         public void Add(WorkOrder workOrder, bool finalized = false)
@@ -125,6 +133,7 @@ namespace AutoRepair.Business.Services
             var workOrder = _workOrderRepository.FindBy(workOrderId);
 
             workOrder.Status = WorkOrderStatus.Open;
+            workOrder.FinalizedDate = null;
             _workOrderRepository.Update(workOrder);
 
             var products = new List<Product>();
@@ -159,6 +168,7 @@ namespace AutoRepair.Business.Services
                     Date = workOrder.Date,
                     Description = workOrder.Description,
                     OrderId = workOrder.Id,
+                    UserName = workOrder.User.Name,
                     WorkOrderDetails = new BindingList<WorkOrderDetailConsult>(details),
                     ServiceCosts =  new BindingList<Models.ServiceCost>(serviceCosts)
                 });
@@ -175,6 +185,7 @@ namespace AutoRepair.Business.Services
         private void FinalizeWorkOrder(DataAccess.Entities.WorkOrder workOrder)
         {
             workOrder.Status = WorkOrderStatus.Finalized;
+            workOrder.FinalizedDate = DateTime.Now.Date;
             _workOrderRepository.Update(workOrder);
 
             var products = new List<Product>();

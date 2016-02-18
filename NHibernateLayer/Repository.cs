@@ -4,7 +4,6 @@ using NHibernate;
 using System.Linq;
 using NHibernate.Linq;
 using AutoRepair.DataAccess.Infrastructure;
-using Microsoft.Win32;
 using MySql.Data.MySqlClient;
 using NHibernate.Exceptions;
 
@@ -114,7 +113,6 @@ namespace AutoRepair.DataAccess.NHibernate
         {
             SessionHandler.Clear();
             return SessionHandler.GetSession().Query<T>();
-
         }
 
         public T FindBy(System.Linq.Expressions.Expression<System.Func<T, bool>> expression)
