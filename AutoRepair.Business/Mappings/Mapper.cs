@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Runtime.Remoting.Channels;
-using AutoRepair.Business.Models;
+﻿using AutoRepair.Business.Models;
 
 namespace AutoRepair.Business.Mappings
 {
@@ -32,7 +30,6 @@ namespace AutoRepair.Business.Mappings
                 .ForMember(dest => dest.Salt,
                     opts => opts.Ignore())
                 ;
-
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.MotorType, MotorType>().ReverseMap();
 
@@ -85,15 +82,9 @@ namespace AutoRepair.Business.Mappings
                     opts => opts.MapFrom(src => src.TransmissionType.Name))
                 ;
 
-           
-
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Category, Category>().ReverseMap();
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.Make, Make>().ReverseMap();
-
-            /* AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrder, WorkOrder>().ReverseMap()
-                 .ForMember(dest=>dest.)
-                 ;*/
 
             AutoMapper.Mapper.CreateMap<DataAccess.Entities.WorkOrder, WorkOrder>().ReverseMap();
 
@@ -127,7 +118,6 @@ namespace AutoRepair.Business.Mappings
                 .ForMember(dest => dest.User,
                     opts => opts.MapFrom(src => src.User.Name))
                 ;
-
 
             AutoMapper.Mapper.AssertConfigurationIsValid();
         }

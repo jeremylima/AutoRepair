@@ -7,6 +7,8 @@ using Ninject.Activation;
 using Ninject.Modules;
 using System.Configuration;
 using AutoRepair.Business.Services;
+using Security.Encryption;
+
 
 namespace AutoRepair.UI.Ninject
 {

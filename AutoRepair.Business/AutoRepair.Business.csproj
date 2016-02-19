@@ -91,11 +91,9 @@
     <Compile Include="Services\CategoryManagementService.cs" />
     <Compile Include="Services\ClientManagementService.cs" />
     <Compile Include="Services\ColorManagementService.cs" />
-    <Compile Include="Services\Encrypter.cs" />
     <Compile Include="Services\ICategoryManagementService.cs" />
     <Compile Include="Services\IClientManagementService.cs" />
     <Compile Include="Services\IColorManagementService.cs" />
-    <Compile Include="Services\IEncrypter.cs" />
     <Compile Include="Services\ILoginManagementService.cs" />
     <Compile Include="Services\IMakeManagementService.cs" />
     <Compile Include="Services\IMotorTypeManagementService.cs" />
@@ -140,6 +138,10 @@
     <ProjectReference Include="..\RepoInfrastructure\RepoInfrastructure.csproj">
       <Project>{fa5943c4-c0ee-4ac2-82d6-a27e6e36a1ce}</Project>
       <Name>RepoInfrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Security.Encryption\Security.Encryption.csproj">
+      <Project>{d42c3496-9700-438d-b028-2bb8e48b3c0b}</Project>
+      <Name>Security.Encryption</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

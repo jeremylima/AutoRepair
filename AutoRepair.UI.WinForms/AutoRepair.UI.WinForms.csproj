@@ -373,6 +373,10 @@
       <Project>{fa5943c4-c0ee-4ac2-82d6-a27e6e36a1ce}</Project>
       <Name>RepoInfrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Security.Encryption\Security.Encryption.csproj">
+      <Project>{d42c3496-9700-438d-b028-2bb8e48b3c0b}</Project>
+      <Name>Security.Encryption</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,7 @@
 ﻿using AutoRepair.Business.Models;
 using AutoRepair.DataAccess.Infrastructure;
 using CustomExceptions;
+using Security.Encryption;
 
 namespace AutoRepair.Business.Services
 {

@@ -4,6 +4,7 @@ using System.Linq;
 using AutoRepair.DataAccess.Entities;
 using AutoRepair.DataAccess.Infrastructure;
 using CustomExceptions;
+using Security.Encryption;
 using User = AutoRepair.Business.Models.User;
 
 namespace AutoRepair.Business.Services
