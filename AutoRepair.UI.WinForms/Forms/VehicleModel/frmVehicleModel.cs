@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
 using AutoRepair.UI.WinForms.Commons;
+using CustomExceptions;
 
 namespace AutoRepair.UI.WinForms.Forms.VehicleModel
 {
@@ -41,28 +42,35 @@ namespace AutoRepair.UI.WinForms.Forms.VehicleModel
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (_vehicleModelConsult != null)
+            try
             {
-                var _vehicleModel = _vehicleModelManagementService.GetVehicleModel(_vehicleModelConsult.Id);
-
-                _vehicleModel.Name = txtModel.Text;
-                _vehicleModel.VehicleMake = _vehicleMakeManagementService.GetVehicleMake((int) cmbMake.EditValue);
-
-                _vehicleModelManagementService.Update(_vehicleModel);
-
-                Notifier.ShowEditSuccessMessage();
-            }
-            else
-            {
-                _vehicleModelManagementService.Add(new Business.Models.VehicleModel
+                if (_vehicleModelConsult != null)
                 {
-                    Name = txtModel.Text,
-                    VehicleMake = _vehicleMakeManagementService.GetVehicleMake((int) cmbMake.EditValue)
-                });
-                Notifier.ShowAddSuccessMessage();
-            }
+                    var _vehicleModel = _vehicleModelManagementService.GetVehicleModel(_vehicleModelConsult.Id);
 
-            Close();
+                    _vehicleModel.Name = txtModel.Text;
+                    _vehicleModel.VehicleMake = _vehicleMakeManagementService.GetVehicleMake((int) cmbMake.EditValue);
+
+                    _vehicleModelManagementService.Update(_vehicleModel);
+
+                    Notifier.ShowEditSuccessMessage();
+                }
+                else
+                {
+                    _vehicleModelManagementService.Add(new Business.Models.VehicleModel
+                    {
+                        Name = txtModel.Text,
+                        VehicleMake = _vehicleMakeManagementService.GetVehicleMake((int) cmbMake.EditValue)
+                    });
+                    Notifier.ShowAddSuccessMessage();
+                }
+
+                Close();
+            }
+            catch (DuplicatedEntryKeyException)
+            {
+                Notifier.DuplicatedEntry();
+            }
         }
     }
 }

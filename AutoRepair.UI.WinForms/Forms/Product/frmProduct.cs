@@ -2,6 +2,7 @@
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
 using AutoRepair.UI.WinForms.Commons;
+using CustomExceptions;
 
 namespace AutoRepair.UI.WinForms.Forms.Product
 {
@@ -56,40 +57,46 @@ namespace AutoRepair.UI.WinForms.Forms.Product
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (_product != null)
+            try
             {
-                _product.Code = txtCode.Text;
-                _product.Name = txtName.Text;
-                _product.Description = txtDescription.Text;
-                _product.CostPrice = Convert.ToDecimal(txtCostPrice.Text);
-                _product.SalePrice = Convert.ToDecimal(txtSalePrice.Text);
-                _product.Stock = Convert.ToDecimal(txtStock.Text);
-                _product.Category = _categoryManagementService.GetCategory((int) cmbCaterory.EditValue);
-                _product.Make = _makeManagementService.GetMake((int) cmbMake.EditValue);
-
-                _productManagementService.Update(_product);
-
-                Notifier.ShowEditSuccessMessage();
-
-            }
-            else
-            {
-                _productManagementService.Add(new Business.Models.Product
+                if (_product != null)
                 {
-                    Code = txtCode.Text,
-                    Name = txtName.Text,
-                    Description = txtDescription.Text,
-                    CostPrice = Convert.ToDecimal(txtCostPrice.Text),
-                    SalePrice = Convert.ToDecimal(txtSalePrice.Text),
-                    Stock = Convert.ToDecimal(txtStock.Text),
-                    Category = _categoryManagementService.GetCategory((int) cmbCaterory.EditValue),
-                    Make = _makeManagementService.GetMake((int) cmbMake.EditValue)
-                });
+                    _product.Code = txtCode.Text;
+                    _product.Name = txtName.Text;
+                    _product.Description = txtDescription.Text;
+                    _product.CostPrice = Convert.ToDecimal(txtCostPrice.Text);
+                    _product.SalePrice = Convert.ToDecimal(txtSalePrice.Text);
+                    _product.Stock = Convert.ToDecimal(txtStock.Text);
+                    _product.Category = _categoryManagementService.GetCategory((int) cmbCaterory.EditValue);
+                    _product.Make = _makeManagementService.GetMake((int) cmbMake.EditValue);
 
-                Notifier.ShowAddSuccessMessage();
+                    _productManagementService.Update(_product);
+
+                    Notifier.ShowEditSuccessMessage();
+                }
+                else
+                {
+                    _productManagementService.Add(new Business.Models.Product
+                    {
+                        Code = txtCode.Text,
+                        Name = txtName.Text,
+                        Description = txtDescription.Text,
+                        CostPrice = Convert.ToDecimal(txtCostPrice.Text),
+                        SalePrice = Convert.ToDecimal(txtSalePrice.Text),
+                        Stock = Convert.ToDecimal(txtStock.Text),
+                        Category = _categoryManagementService.GetCategory((int) cmbCaterory.EditValue),
+                        Make = _makeManagementService.GetMake((int) cmbMake.EditValue)
+                    });
+
+                    Notifier.ShowAddSuccessMessage();
+                }
+
+                Close();
             }
-
-            Close();
+            catch (DuplicatedEntryKeyException)
+            {
+                Notifier.DuplicatedEntry();
+            }
         }
        
     }

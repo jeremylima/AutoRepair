@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
 using AutoRepair.UI.WinForms.Commons;
+using CustomExceptions;
 
 namespace AutoRepair.UI.WinForms.Forms.Login
 {
@@ -28,18 +29,16 @@ namespace AutoRepair.UI.WinForms.Forms.Login
             if(!dxValidationProviderIsNullOrEmpty.Validate())
                 return;
 
-            var user = _loginManagementService.Login(txtUserName.Text, txtPassword.Text);
-
-            if (user != null)
+            try
             {
-                User = user;
+                User = _loginManagementService.Login(txtUserName.Text, txtPassword.Text);
                 Close();
             }
-            else
+            catch (LoginFailureException)
             {
                 Notifier.LoginFailure();
-            }
 
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

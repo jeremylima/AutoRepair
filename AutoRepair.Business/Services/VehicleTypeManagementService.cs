@@ -2,6 +2,7 @@
 using System.Linq;
 using AutoRepair.Business.Models;
 using AutoRepair.DataAccess.Infrastructure;
+using CustomExceptions;
 
 namespace AutoRepair.Business.Services
 {
@@ -27,11 +28,22 @@ namespace AutoRepair.Business.Services
 
         public void Add(VehicleType vehicleType)
         {
+            var _vehicleType = _vehicleTypeRepository.FindBy(x => x.Name == vehicleType.Name);
+            if (_vehicleType != null)
+                throw new DuplicatedEntryKeyException();
+
             _vehicleTypeRepository.Add(AutoMapper.Mapper.Map<VehicleType, DataAccess.Entities.VehicleType>(vehicleType));
         }
 
         public void Update(VehicleType vehicleType)
         {
+            var _vehicleType = _vehicleTypeRepository.FindBy(x => x.Name == vehicleType.Name);
+            if (_vehicleType != null)
+            {
+                if (_vehicleType.Id != vehicleType.Id)
+                    throw new DuplicatedEntryKeyException();
+            }
+
             _vehicleTypeRepository.Update(AutoMapper.Mapper.Map<VehicleType, DataAccess.Entities.VehicleType>(vehicleType));
         }
 

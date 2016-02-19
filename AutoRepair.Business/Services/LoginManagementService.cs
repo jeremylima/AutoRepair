@@ -1,5 +1,6 @@
 ﻿using AutoRepair.Business.Models;
 using AutoRepair.DataAccess.Infrastructure;
+using CustomExceptions;
 
 namespace AutoRepair.Business.Services
 {
@@ -23,14 +24,17 @@ namespace AutoRepair.Business.Services
         {
             var user = _userRepository.FindBy(x => x.UserName == username);
             if (user == null)
-                return null;
+                throw new LoginFailureException(); 
 
             if (!user.IsSystemUser)
-                return null;
+                throw new LoginFailureException();
 
             var hash = _encrypter.GenerateSHA256Hash(password, user.Salt);
 
-            return user.Hash.Equals(hash) ? AutoMapper.Mapper.Map<DataAccess.Entities.User, User>(user) : null;
+            if (user.Hash.Equals(hash))
+                return AutoMapper.Mapper.Map<DataAccess.Entities.User, User>(user);
+
+            throw new LoginFailureException();
         }
     }
 }

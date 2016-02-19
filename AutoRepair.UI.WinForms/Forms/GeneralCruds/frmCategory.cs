@@ -1,8 +1,11 @@
 ﻿using System;
+using AutoRepair.Business.Models;
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
 using AutoRepair.UI.WinForms.Commons;
 using AutoRepair.UI.WinForms.Forms.CrudBase;
+using CustomExceptions;
+using DevExpress.XtraBars;
 
 namespace AutoRepair.UI.WinForms.Forms.GeneralCruds
 {
@@ -22,25 +25,32 @@ namespace AutoRepair.UI.WinForms.Forms.GeneralCruds
                 txtName.Text = _entity.Name;
         }
 
-        public override void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public override void btnSave_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (_entity != null)
+            try
             {
-                _entity.Name = txtName.Text;
-                _entityManagementService.Update(_entity);
-                Notifier.ShowEditSuccessMessage();
-            }
-            else
-            {
-                _entityManagementService.Add(new Business.Models.Category
+                if (_entity != null)
                 {
-                    Name = txtName.Text
-                });
+                    _entity.Name = txtName.Text;
+                    _entityManagementService.Update(_entity);
+                    Notifier.ShowEditSuccessMessage();
+                }
+                else
+                {
+                    _entityManagementService.Add(new Category
+                    {
+                        Name = txtName.Text
+                    });
 
-                Notifier.ShowAddSuccessMessage();
+                    Notifier.ShowAddSuccessMessage();
+                }
+
+                Close();
             }
-
-            Close();
+            catch (DuplicatedEntryKeyException)
+            {
+                Notifier.DuplicatedEntry();
+            }
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
 using AutoRepair.UI.WinForms.Commons;
+using CustomExceptions;
 
 namespace AutoRepair.UI.WinForms.Forms.Vehicle
 {
@@ -129,41 +129,48 @@ namespace AutoRepair.UI.WinForms.Forms.Vehicle
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (_vehicle != null)
+            try
             {
-                _vehicle.LicensePlate = txtLicencePlate.Text;
-                _vehicle.Model = _vehicleModelManagementService.GetVehicleModel((int) cmbModel.EditValue);
-                _vehicle.Color = _colorManagementService.GetColor((int) cmbColor.EditValue);
-                _vehicle.MotorCc = Convert.ToInt32(txtMotorCc.Text);
-                _vehicle.MotorType = _motorTypeManagementService.GetMotorType((int) cmbMotorType.EditValue);
-                _vehicle.TransmissionType = _transmissionTypeManagementService.GetTransmissionType((int)cmbTransmissionType.EditValue);
-                _vehicle.Type = _vehicleTypeManagementService.GetVehicleType((int) cmbType.EditValue);
-                _vehicle.Year = (int) cmbYear.EditValue;
-
-                _vehicleManagementService.Update(_vehicle);
-
-                Notifier.ShowEditSuccessMessage();
-            }
-            else
-            {
-                _vehicleManagementService.Add(new Business.Models.Vehicle
+                if (_vehicle != null)
                 {
-                    LicensePlate = txtLicencePlate.Text,
-                    Model = _vehicleModelManagementService.GetVehicleModel((int) cmbModel.EditValue),
-                    Color = _colorManagementService.GetColor((int) cmbColor.EditValue),
-                    MotorCc = Convert.ToInt32(txtMotorCc.Text),
-                    MotorType = _motorTypeManagementService.GetMotorType((int) cmbMotorType.EditValue),
-                    Type = _vehicleTypeManagementService.GetVehicleType((int) cmbType.EditValue),
-                    TransmissionType = _transmissionTypeManagementService.GetTransmissionType((int)cmbTransmissionType.EditValue),
-                    Year = (int) cmbYear.EditValue
-                });
+                    _vehicle.LicensePlate = txtLicencePlate.Text;
+                    _vehicle.Model = _vehicleModelManagementService.GetVehicleModel((int) cmbModel.EditValue);
+                    _vehicle.Color = _colorManagementService.GetColor((int) cmbColor.EditValue);
+                    _vehicle.MotorCc = Convert.ToInt32(txtMotorCc.Text);
+                    _vehicle.MotorType = _motorTypeManagementService.GetMotorType((int) cmbMotorType.EditValue);
+                    _vehicle.TransmissionType =
+                        _transmissionTypeManagementService.GetTransmissionType((int) cmbTransmissionType.EditValue);
+                    _vehicle.Type = _vehicleTypeManagementService.GetVehicleType((int) cmbType.EditValue);
+                    _vehicle.Year = (int) cmbYear.EditValue;
 
-                Notifier.ShowAddSuccessMessage();
+                    _vehicleManagementService.Update(_vehicle);
+
+                    Notifier.ShowEditSuccessMessage();
+                }
+                else
+                {
+                    _vehicleManagementService.Add(new Business.Models.Vehicle
+                    {
+                        LicensePlate = txtLicencePlate.Text,
+                        Model = _vehicleModelManagementService.GetVehicleModel((int) cmbModel.EditValue),
+                        Color = _colorManagementService.GetColor((int) cmbColor.EditValue),
+                        MotorCc = Convert.ToInt32(txtMotorCc.Text),
+                        MotorType = _motorTypeManagementService.GetMotorType((int) cmbMotorType.EditValue),
+                        Type = _vehicleTypeManagementService.GetVehicleType((int) cmbType.EditValue),
+                        TransmissionType =
+                            _transmissionTypeManagementService.GetTransmissionType((int) cmbTransmissionType.EditValue),
+                        Year = (int) cmbYear.EditValue
+                    });
+
+                    Notifier.ShowAddSuccessMessage();
+                }
+
+                Close();
             }
-
-            Close();
+            catch (DuplicatedEntryKeyException)
+            {
+                Notifier.DuplicatedEntry();
+            }
         }
-
-       
     }
 }

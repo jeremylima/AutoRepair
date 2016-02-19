@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
 using AutoRepair.UI.WinForms.Commons;
+using CustomExceptions;
 
 namespace AutoRepair.UI.WinForms.Forms.Client
 {
@@ -31,34 +32,40 @@ namespace AutoRepair.UI.WinForms.Forms.Client
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (_client != null)
+            try
             {
-                _client.Nit = txtNit.Text;
-                _client.FirstName = txtFirstName.Text;
-                _client.LastName = txtLastName.Text;
-                _client.MobilePhone = txtMobile.Text;
-                _client.Phone = txtPhone.Text;
-
-                _clientManagementService.Update(_client);
-
-                Notifier.ShowEditSuccessMessage();
-            }
-            else
-            {
-                _clientManagementService.Add(new Business.Models.Client
+                if (_client != null)
                 {
-                    Nit = txtNit.Text,
-                    FirstName = txtFirstName.Text,
-                    LastName = txtLastName.Text,
-                    MobilePhone = txtMobile.Text,
-                    Phone = txtPhone.Text
-                });
+                    _client.Nit = txtNit.Text;
+                    _client.FirstName = txtFirstName.Text;
+                    _client.LastName = txtLastName.Text;
+                    _client.MobilePhone = txtMobile.Text;
+                    _client.Phone = txtPhone.Text;
 
-                Notifier.ShowAddSuccessMessage();
-                
+                    _clientManagementService.Update(_client);
+
+                    Notifier.ShowEditSuccessMessage();
+                }
+                else
+                {
+                    _clientManagementService.Add(new Business.Models.Client
+                    {
+                        Nit = txtNit.Text,
+                        FirstName = txtFirstName.Text,
+                        LastName = txtLastName.Text,
+                        MobilePhone = txtMobile.Text,
+                        Phone = txtPhone.Text
+                    });
+
+                    Notifier.ShowAddSuccessMessage();
+                }
+
+                Close();
             }
-
-            Close();
+            catch (DuplicatedEntryKeyException)
+            {
+                Notifier.DuplicatedEntry();
+            }
         }
     }
 }
