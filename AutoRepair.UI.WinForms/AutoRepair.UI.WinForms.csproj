@@ -175,6 +175,12 @@
     <Compile Include="Forms\Reports\WorkOrderByUserReport.Designer.cs">
       <DependentUpon>WorkOrderByUserReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reports\WorkOrdersGrossProfitReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\WorkOrdersGrossProfitReport.Designer.cs">
+      <DependentUpon>WorkOrdersGrossProfitReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\User\frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reports\WorkOrderByUserReport.resx">
       <DependentUpon>WorkOrderByUserReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\WorkOrdersGrossProfitReport.resx">
+      <DependentUpon>WorkOrdersGrossProfitReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\User\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>

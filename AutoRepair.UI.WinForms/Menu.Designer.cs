@@ -46,6 +46,7 @@
             this.btnUsers = new DevExpress.XtraBars.BarButtonItem();
             this.btnChangePassword = new DevExpress.XtraBars.BarButtonItem();
             this.btnReportByUser = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProfitReportButton = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -93,9 +94,10 @@
             this.btnTransmissionTypes,
             this.btnUsers,
             this.btnChangePassword,
-            this.btnReportByUser});
+            this.btnReportByUser,
+            this.btnProfitReportButton});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 16;
+            this.ribbonControl1.MaxItemId = 17;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -231,12 +233,21 @@
             // 
             // btnReportByUser
             // 
-            this.btnReportByUser.Caption = "Reporte por usuario";
+            this.btnReportByUser.Caption = "Reporte Por Usuario";
             this.btnReportByUser.Glyph = ((System.Drawing.Image)(resources.GetObject("btnReportByUser.Glyph")));
             this.btnReportByUser.Id = 15;
             this.btnReportByUser.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnReportByUser.LargeGlyph")));
             this.btnReportByUser.Name = "btnReportByUser";
             this.btnReportByUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReportByUser_ItemClick);
+            // 
+            // btnProfitReportButton
+            // 
+            this.btnProfitReportButton.Caption = "Reporte de Utilidades";
+            this.btnProfitReportButton.Glyph = ((System.Drawing.Image)(resources.GetObject("btnProfitReportButton.Glyph")));
+            this.btnProfitReportButton.Id = 16;
+            this.btnProfitReportButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnProfitReportButton.LargeGlyph")));
+            this.btnProfitReportButton.Name = "btnProfitReportButton";
+            this.btnProfitReportButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProfitReportButton_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -280,6 +291,7 @@
             this.ribbonPageGroupAdmin.AllowTextClipping = false;
             this.ribbonPageGroupAdmin.ItemLinks.Add(this.btnUsers);
             this.ribbonPageGroupAdmin.ItemLinks.Add(this.btnReportByUser);
+            this.ribbonPageGroupAdmin.ItemLinks.Add(this.btnProfitReportButton);
             this.ribbonPageGroupAdmin.Name = "ribbonPageGroupAdmin";
             this.ribbonPageGroupAdmin.Text = "Uso Exclusivo Administrador";
             // 
@@ -477,5 +489,6 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.XtraBars.BarButtonItem btnReportByUser;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupAdmin;
+        private DevExpress.XtraBars.BarButtonItem btnProfitReportButton;
     }
 }

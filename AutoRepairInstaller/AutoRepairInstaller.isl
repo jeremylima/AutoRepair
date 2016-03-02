@@ -343,24 +343,44 @@
 		<row><td>AutoMapper.dll</td><td>{08611BAB-08CE-4C3F-AA70-26B6EB06F6CB}</td><td>INSTALLDIR</td><td>2</td><td/><td>automapper.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>AutoRepair.Business.Primary_output</td><td>{310E7987-6EC4-4743-B594-4BC1A0C10D17}</td><td>INSTALLDIR</td><td>2</td><td/><td>autorepair.business.primary_</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>AutoRepair.UI.WinForms.Primary_output</td><td>{86CC0DC2-4D72-48A1-A811-717B6C1429CD}</td><td>INSTALLDIR</td><td>2</td><td/><td>autorepair.ui.winforms.prima</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>CustomExceptions.Primary_output</td><td>{843DE3B6-5902-4CD4-9376-785D4EAB9B24}</td><td>INSTALLDIR</td><td>2</td><td/><td>customexceptions.primary_out</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>DTOS.Primary_output</td><td>{EEBE7A52-6154-44C2-9A22-64404B880729}</td><td>INSTALLDIR</td><td>2</td><td/><td>dtos.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.BonusSkins.v15.2.dll</td><td>{4433550E-5CE6-440E-9541-C6B5C1F0ED63}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.bonusskins.v15.2.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.Data.v15.2.dll</td><td>{706F9C62-DD94-442B-8B30-535F2BCB3EE7}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.data.v15.2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.Office.v15.2.Core.dll</td><td>{1882822D-8941-4C23-89A6-BC482D807700}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.office.v15.2.core</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.Pdf.v15.2.Core.dll</td><td>{3BEF9CB3-95CC-4BC0-BC41-6C2F22CC9405}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.pdf.v15.2.core.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.Pdf.v15.2.Drawing.dll</td><td>{7D060496-8703-44AF-A180-0FFBDE449EA0}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.pdf.v15.2.drawing</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.Printing.v15.2.Core.dll</td><td>{C63C745D-B4DC-4C46-A4FC-2F5B9D1A9779}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.printing.v15.2.co</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.RichEdit.v15.2.Core.dll</td><td>{E52CEA22-986E-4208-8100-4DE51DC46092}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.richedit.v15.2.co</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.Sparkline.v15.2.Core.dll</td><td>{3F4C4993-78AB-411B-B6D3-88478B90569A}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.sparkline.v15.2.c</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.Utils.v15.2.dll</td><td>{8CA0F1DC-42B6-4976-A3EF-48CF059BA0BA}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.utils.v15.2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.XtraBars.v15.2.dll</td><td>{5F3DEF0F-5A68-4D5F-BD5F-CB7F0072FAFF}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtrabars.v15.2.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.XtraEditors.v15.2.dll</td><td>{E564290C-E5ED-4637-8FDF-C5ACAE261EAE}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtraeditors.v15.2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.XtraGrid.v15.2.dll</td><td>{96680976-3EF7-45AC-8A06-5317D217B704}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtragrid.v15.2.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.XtraLayout.v15.2.dll</td><td>{F6D18182-E1A6-4B87-AA1C-B36A7DEA06DC}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtralayout.v15.2.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.XtraPrinting.v15.2.dll</td><td>{460527AB-0FCD-45E8-84F5-C453E535AF3C}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtraprinting.v15.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DevExpress.XtraTreeList.v15.2.dll</td><td>{D73CDD1E-99E9-43CA-8E10-D9F4212D1BFC}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtratreelist.v15.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.BonusSkins.v15.2.dll</td><td>{2F3FD8F4-52C8-4D8A-A865-5B533B32231C}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.bonusskins.v15.2.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Charts.v15.2.Core.dll</td><td>{753E1537-BE8E-47D3-BDAF-93159C0A78DC}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.charts.v15.2.core</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.CodeParser.v15.2.dll</td><td>{394D0B8A-4E97-4CD9-BF05-93DB9E742FA9}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.codeparser.v15.2.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Data.v15.2.dll</td><td>{7CF25CFF-AB96-44B3-9FF8-6EAACCE2E19A}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.data.v15.2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.DataAccess.v15.2.UI.dll</td><td>{0EF6FF6F-9459-4474-B337-C1A0D6210FC4}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.dataaccess.v15.2.1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.DataAccess.v15.2.dll</td><td>{58DFEF00-D4A1-4CAF-87BB-5871541CADE4}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.dataaccess.v15.2.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Office.v15.2.Core.dll</td><td>{ABD663BE-D1BF-457A-8534-252F5A608AE8}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.office.v15.2.core</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Pdf.v15.2.Core.dll</td><td>{4C74714A-0F01-4829-B94A-122B39A4C0AE}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.pdf.v15.2.core.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Pdf.v15.2.Drawing.dll</td><td>{454A9D83-2CA7-4FB0-A21B-01894CB6C5B0}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.pdf.v15.2.drawing</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.PivotGrid.v15.2.Core.dll</td><td>{13D021F3-CF27-40B5-AC51-C488A8B01F06}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.pivotgrid.v15.2.c</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Printing.v15.2.Core.dll</td><td>{B3915754-EF0C-4BD4-A86A-AD69CBF7E54C}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.printing.v15.2.co</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.RichEdit.v15.2.Core.dll</td><td>{04F03352-6509-4A77-BEED-B5AFF6B8B1D2}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.richedit.v15.2.co</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Sparkline.v15.2.Core.dll</td><td>{B494991A-050B-4F73-A842-E99BF84DE442}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.sparkline.v15.2.c</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Utils.v15.2.UI.dll</td><td>{E4ED1295-AB38-4D84-88E3-7FACC6A1E058}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.utils.v15.2.ui.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Utils.v15.2.dll</td><td>{0B7E19E5-6183-4147-9DF2-2D4F41BBB91F}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.utils.v15.2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.Xpo.v15.2.dll</td><td>{699945A3-6C05-467B-B2FD-582011070950}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xpo.v15.2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraBars.v15.2.dll</td><td>{7C8DE77B-D8D0-4B8A-91F6-51EB269EC89B}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtrabars.v15.2.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraCharts.v15.2.Extensions.dll</td><td>{48EB9AC4-43C0-4B5C-8BA4-EC12F0E06147}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtracharts.v15.2.1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraCharts.v15.2.Wizard.dll</td><td>{0CA9FC07-716E-4E6D-B1FC-455E934B3299}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtracharts.v15.2.2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraCharts.v15.2.dll</td><td>{1F25A09C-1023-41B1-B25C-64A5602C4308}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtracharts.v15.2.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraEditors.v15.2.dll</td><td>{2900B5FA-8823-44AB-8578-D315E59FFD49}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtraeditors.v15.2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraGauges.v15.2.Core.dll</td><td>{74807648-4BF8-4CD1-8543-62C7947BAF05}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtragauges.v15.2.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraGrid.v15.2.dll</td><td>{3E5A36AF-F99A-4D6F-AC82-ED4EC1DD9285}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtragrid.v15.2.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraLayout.v15.2.dll</td><td>{FA2F2BC0-1621-4192-A995-C9EC34D41D76}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtralayout.v15.2.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraNavBar.v15.2.dll</td><td>{39B055B8-FD72-4F3F-BC76-63A3FB50F884}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtranavbar.v15.2.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraPivotGrid.v15.2.dll</td><td>{6AD505D1-3497-4B2C-89E2-83430A087BF4}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtrapivotgrid.v15</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraPrinting.v15.2.dll</td><td>{C2E64283-43EF-4D88-8A96-8CF55F07F7D6}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtraprinting.v15.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraReports.v15.2.Extensions.dll</td><td>{88D02455-C029-4C9E-9D05-297F1E050E0F}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtrareports.v15.21</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraReports.v15.2.dll</td><td>{A64933DC-3943-4A4E-8694-CB60F3C3B004}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtrareports.v15.2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraRichEdit.v15.2.dll</td><td>{95660CDC-EA1F-46C8-A17F-DAB4497E2B01}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtrarichedit.v15.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraTreeList.v15.2.dll</td><td>{66CFABDA-0FD0-4FB7-8BAB-15EF2F132C8D}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtratreelist.v15.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DevExpress.XtraVerticalGrid.v15.2.dll</td><td>{556793D8-3FFD-46BB-BACD-CDEAFADBF6E3}</td><td>INSTALLDIR</td><td>2</td><td/><td>devexpress.xtraverticalgrid.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>FluentNHibernate.dll</td><td>{CD4A2FCA-AB73-4CC7-B82B-180295C0D830}</td><td>INSTALLDIR</td><td>2</td><td/><td>fluentnhibernate.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td>{C4266C6F-A02B-4784-9ADE-52F2516377E6}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Iesi.Collections.dll</td><td>{26412611-2580-4019-BB31-A1398FDA9D09}</td><td>INSTALLDIR</td><td>2</td><td/><td>iesi.collections.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LicenseKeyGenerator.Primary_output</td><td>{F6728654-84B1-420E-8150-FDBC07CF7449}</td><td>INSTALLDIR</td><td>2</td><td/><td>licensekeygenerator.primary_</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>MySql.Data.dll</td><td>{167E075E-1ABF-44EF-8B80-4359C8756509}</td><td>INSTALLDIR</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NHibernate.Linq.dll</td><td>{85F0BC43-5A4E-4038-8E5E-49FEAFF07DFE}</td><td>INSTALLDIR</td><td>2</td><td/><td>nhibernate.linq.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NHibernate.dll</td><td>{93F8FDFB-D02D-43D6-90F0-A02C3DF1E787}</td><td>INSTALLDIR</td><td>2</td><td/><td>nhibernate.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -368,6 +388,7 @@
 		<row><td>NHibernateLayerTests.Primary_output</td><td>{CD257760-09D9-4739-83F7-FFB2A4E17B22}</td><td>INSTALLDIR</td><td>2</td><td/><td>nhibernatelayertests.primary</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Ninject.dll</td><td>{B174AB32-CFBF-4430-A5B8-A82AEECCED58}</td><td>INSTALLDIR</td><td>2</td><td/><td>ninject.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>RepoInfrastructure.Primary_output</td><td>{62A89AC9-A815-49FE-88D1-8E69243680D4}</td><td>INSTALLDIR</td><td>2</td><td/><td>repoinfrastructure.primary_o</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Security.Encryption.Primary_output</td><td>{2090B58B-3AEC-4425-947D-9765CD2C8816}</td><td>INSTALLDIR</td><td>2</td><td/><td>security.encryption.primary_</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1079,24 +1100,44 @@
 		<row><td>INSTALLDIR</td><td>AutoMapper.dll</td></row>
 		<row><td>INSTALLDIR</td><td>AutoRepair.Business.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>AutoRepair.UI.WinForms.Primary_output</td></row>
+		<row><td>INSTALLDIR</td><td>CustomExceptions.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>DTOS.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.BonusSkins.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.Charts.v15.2.Core.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.CodeParser.v15.2.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.Data.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.DataAccess.v15.2.UI.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.DataAccess.v15.2.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.Office.v15.2.Core.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.Pdf.v15.2.Core.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.Pdf.v15.2.Drawing.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.PivotGrid.v15.2.Core.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.Printing.v15.2.Core.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.RichEdit.v15.2.Core.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.Sparkline.v15.2.Core.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.Utils.v15.2.UI.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.Utils.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.Xpo.v15.2.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.XtraBars.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraCharts.v15.2.Extensions.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraCharts.v15.2.Wizard.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraCharts.v15.2.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.XtraEditors.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraGauges.v15.2.Core.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.XtraGrid.v15.2.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.XtraLayout.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraNavBar.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraPivotGrid.v15.2.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.XtraPrinting.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraReports.v15.2.Extensions.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraReports.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraRichEdit.v15.2.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DevExpress.XtraTreeList.v15.2.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DevExpress.XtraVerticalGrid.v15.2.dll</td></row>
 		<row><td>INSTALLDIR</td><td>FluentNHibernate.dll</td></row>
+		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>Iesi.Collections.dll</td></row>
+		<row><td>INSTALLDIR</td><td>LicenseKeyGenerator.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>MySql.Data.dll</td></row>
 		<row><td>INSTALLDIR</td><td>NHibernate.Linq.dll</td></row>
 		<row><td>INSTALLDIR</td><td>NHibernate.dll</td></row>
@@ -1104,6 +1145,7 @@
 		<row><td>INSTALLDIR</td><td>NHibernateLayerTests.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>Ninject.dll</td></row>
 		<row><td>INSTALLDIR</td><td>RepoInfrastructure.Primary_output</td></row>
+		<row><td>INSTALLDIR</td><td>Security.Encryption.Primary_output</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1918,24 +1960,44 @@
 		<row><td>AlwaysInstall</td><td>AutoMapper.dll</td></row>
 		<row><td>AlwaysInstall</td><td>AutoRepair.Business.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>AutoRepair.UI.WinForms.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>CustomExceptions.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>DTOS.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.BonusSkins.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.Charts.v15.2.Core.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.CodeParser.v15.2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.Data.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.DataAccess.v15.2.UI.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.DataAccess.v15.2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.Office.v15.2.Core.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.Pdf.v15.2.Core.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.Pdf.v15.2.Drawing.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.PivotGrid.v15.2.Core.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.Printing.v15.2.Core.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.RichEdit.v15.2.Core.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.Sparkline.v15.2.Core.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.Utils.v15.2.UI.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.Utils.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.Xpo.v15.2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.XtraBars.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraCharts.v15.2.Extensions.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraCharts.v15.2.Wizard.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraCharts.v15.2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.XtraEditors.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraGauges.v15.2.Core.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.XtraGrid.v15.2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.XtraLayout.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraNavBar.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraPivotGrid.v15.2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.XtraPrinting.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraReports.v15.2.Extensions.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraReports.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraRichEdit.v15.2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DevExpress.XtraTreeList.v15.2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DevExpress.XtraVerticalGrid.v15.2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>FluentNHibernate.dll</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>Iesi.Collections.dll</td></row>
+		<row><td>AlwaysInstall</td><td>LicenseKeyGenerator.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>MySql.Data.dll</td></row>
 		<row><td>AlwaysInstall</td><td>NHibernate.Linq.dll</td></row>
 		<row><td>AlwaysInstall</td><td>NHibernate.dll</td></row>
@@ -1943,6 +2005,7 @@
 		<row><td>AlwaysInstall</td><td>NHibernateLayerTests.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>Ninject.dll</td></row>
 		<row><td>AlwaysInstall</td><td>RepoInfrastructure.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>Security.Encryption.Primary_output</td></row>
 	</table>
 
 	<table name="File">
@@ -1960,24 +2023,71 @@
 		<row><td>automapper.dll</td><td>AutoMapper.dll</td><td>AUTOMA~1.DLL|AutoMapper.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\AutoMapper.dll</td><td>1</td><td/></row>
 		<row><td>autorepair.business.primary_</td><td>AutoRepair.Business.Primary_output</td><td>AutoRepair.Business.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoRepair.Business&gt;|Built</td><td>3</td><td/></row>
 		<row><td>autorepair.ui.winforms.prima</td><td>AutoRepair.UI.WinForms.Primary_output</td><td>AutoRepair.UI.WinForms.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoRepair.UI.WinForms&gt;|Built</td><td>3</td><td/></row>
+		<row><td>customexceptions.primary_out</td><td>CustomExceptions.Primary_output</td><td>CustomExceptions.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;CustomExceptions&gt;|Built</td><td>3</td><td/></row>
 		<row><td>devexpress.bonusskins.v15.2.</td><td>DevExpress.BonusSkins.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.BonusSkins.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.BonusSkins.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.charts.v15.2.core</td><td>DevExpress.Charts.v15.2.Core.dll</td><td>DEVEXP~1.DLL|DevExpress.Charts.v15.2.Core.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Charts.v15.2.Core.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.codeparser.v15.2.</td><td>DevExpress.CodeParser.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.CodeParser.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.CodeParser.v15.2.dll</td><td>1</td><td/></row>
 		<row><td>devexpress.data.v15.2.dll</td><td>DevExpress.Data.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.Data.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Data.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.data.v15.2.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.Data.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Data.v15.2.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.dataaccess.v15.2.</td><td>DevExpress.DataAccess.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.DataAccess.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.DataAccess.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.dataaccess.v15.2.1</td><td>DevExpress.DataAccess.v15.2.UI.dll</td><td>DEVEXP~1.DLL|DevExpress.DataAccess.v15.2.UI.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.DataAccess.v15.2.UI.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.dataaccess.v15.2.2</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.DataAccess.v15.2.UI.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.DataAccess.v15.2.UI.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.dataaccess.v15.2.3</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.DataAccess.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.DataAccess.v15.2.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.office.v15.2.core</td><td>DevExpress.Office.v15.2.Core.dll</td><td>DEVEXP~1.DLL|DevExpress.Office.v15.2.Core.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Office.v15.2.Core.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.office.v15.2.core1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.Office.v15.2.Core.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Office.v15.2.Core.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.pdf.v15.2.core.dl</td><td>DevExpress.Pdf.v15.2.Core.dll</td><td>DEVEXP~1.DLL|DevExpress.Pdf.v15.2.Core.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Pdf.v15.2.Core.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.pdf.v15.2.core.xm</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.Pdf.v15.2.Core.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Pdf.v15.2.Core.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.pdf.v15.2.drawing</td><td>DevExpress.Pdf.v15.2.Drawing.dll</td><td>DEVEXP~1.DLL|DevExpress.Pdf.v15.2.Drawing.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.pdf.v15.2.drawing1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.Pdf.v15.2.Drawing.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.pivotgrid.v15.2.c</td><td>DevExpress.PivotGrid.v15.2.Core.dll</td><td>DEVEXP~1.DLL|DevExpress.PivotGrid.v15.2.Core.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.pivotgrid.v15.2.c1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.PivotGrid.v15.2.Core.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.printing.v15.2.co</td><td>DevExpress.Printing.v15.2.Core.dll</td><td>DEVEXP~1.DLL|DevExpress.Printing.v15.2.Core.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Printing.v15.2.Core.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.printing.v15.2.co1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.Printing.v15.2.Core.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Printing.v15.2.Core.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.richedit.v15.2.co</td><td>DevExpress.RichEdit.v15.2.Core.dll</td><td>DEVEXP~1.DLL|DevExpress.RichEdit.v15.2.Core.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.richedit.v15.2.co1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.RichEdit.v15.2.Core.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.sparkline.v15.2.c</td><td>DevExpress.Sparkline.v15.2.Core.dll</td><td>DEVEXP~1.DLL|DevExpress.Sparkline.v15.2.Core.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.sparkline.v15.2.c1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.Sparkline.v15.2.Core.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.utils.v15.2.dll</td><td>DevExpress.Utils.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.Utils.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Utils.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.utils.v15.2.ui.dl</td><td>DevExpress.Utils.v15.2.UI.dll</td><td>DEVEXP~1.DLL|DevExpress.Utils.v15.2.UI.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Utils.v15.2.UI.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.utils.v15.2.ui.xm</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.Utils.v15.2.UI.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Utils.v15.2.UI.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.utils.v15.2.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.Utils.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Utils.v15.2.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xpo.v15.2.dll</td><td>DevExpress.Xpo.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.Xpo.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Xpo.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xpo.v15.2.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.Xpo.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.Xpo.v15.2.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.xtrabars.v15.2.dl</td><td>DevExpress.XtraBars.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraBars.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraBars.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtrabars.v15.2.xm</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraBars.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraBars.v15.2.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xtracharts.v15.2.</td><td>DevExpress.XtraCharts.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraCharts.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraCharts.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtracharts.v15.2.1</td><td>DevExpress.XtraCharts.v15.2.Extensions.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraCharts.v15.2.Extensions.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraCharts.v15.2.Extensions.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtracharts.v15.2.2</td><td>DevExpress.XtraCharts.v15.2.Wizard.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraCharts.v15.2.Wizard.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtracharts.v15.2.3</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraCharts.v15.2.Wizard.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xtracharts.v15.2.4</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraCharts.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraCharts.v15.2.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.xtraeditors.v15.2</td><td>DevExpress.XtraEditors.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraEditors.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraEditors.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtraeditors.v15.21</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraEditors.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraEditors.v15.2.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xtragauges.v15.2.</td><td>DevExpress.XtraGauges.v15.2.Core.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraGauges.v15.2.Core.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraGauges.v15.2.Core.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtragauges.v15.2.1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraGauges.v15.2.Core.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraGauges.v15.2.Core.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.xtragrid.v15.2.dl</td><td>DevExpress.XtraGrid.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraGrid.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraGrid.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtragrid.v15.2.xm</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraGrid.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraGrid.v15.2.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.xtralayout.v15.2.</td><td>DevExpress.XtraLayout.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraLayout.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraLayout.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtralayout.v15.2.1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraLayout.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraLayout.v15.2.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xtranavbar.v15.2.</td><td>DevExpress.XtraNavBar.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraNavBar.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraNavBar.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtranavbar.v15.2.1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraNavBar.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraNavBar.v15.2.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xtrapivotgrid.v15</td><td>DevExpress.XtraPivotGrid.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraPivotGrid.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtrapivotgrid.v151</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraPivotGrid.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v15.2.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.xtraprinting.v15.</td><td>DevExpress.XtraPrinting.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraPrinting.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraPrinting.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtraprinting.v15.1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraPrinting.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraPrinting.v15.2.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xtrareports.v15.2</td><td>DevExpress.XtraReports.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraReports.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraReports.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtrareports.v15.21</td><td>DevExpress.XtraReports.v15.2.Extensions.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraReports.v15.2.Extensions.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraReports.v15.2.Extensions.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtrareports.v15.22</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraReports.v15.2.Extensions.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraReports.v15.2.Extensions.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xtrareports.v15.23</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraReports.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraReports.v15.2.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xtrarichedit.v15.</td><td>DevExpress.XtraRichEdit.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraRichEdit.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraRichEdit.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtrarichedit.v15.1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraRichEdit.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraRichEdit.v15.2.xml</td><td>1</td><td/></row>
 		<row><td>devexpress.xtratreelist.v15.</td><td>DevExpress.XtraTreeList.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraTreeList.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraTreeList.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtratreelist.v15.1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraTreeList.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraTreeList.v15.2.xml</td><td>1</td><td/></row>
+		<row><td>devexpress.xtraverticalgrid.</td><td>DevExpress.XtraVerticalGrid.v15.2.dll</td><td>DEVEXP~1.DLL|DevExpress.XtraVerticalGrid.v15.2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraVerticalGrid.v15.2.dll</td><td>1</td><td/></row>
+		<row><td>devexpress.xtraverticalgrid.1</td><td>ISX_DEFAULTCOMPONENT</td><td>DEVEXP~1.XML|DevExpress.XtraVerticalGrid.v15.2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\DevExpress.XtraVerticalGrid.v15.2.xml</td><td>1</td><td/></row>
 		<row><td>dtos.primary_output</td><td>DTOS.Primary_output</td><td>DTOS.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;DTOS&gt;|Built</td><td>3</td><td/></row>
 		<row><td>fluentnhibernate.dll</td><td>FluentNHibernate.dll</td><td>FLUENT~1.DLL|FluentNHibernate.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\FluentNHibernate.dll</td><td>1</td><td/></row>
 		<row><td>iesi.collections.dll</td><td>Iesi.Collections.dll</td><td>IESICO~1.DLL|Iesi.Collections.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\Iesi.Collections.dll</td><td>1</td><td/></row>
+		<row><td>licensekeygenerator.primary_</td><td>LicenseKeyGenerator.Primary_output</td><td>LicenseKeyGenerator.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;LicenseKeyGenerator&gt;|Built</td><td>3</td><td/></row>
 		<row><td>mysql.data.dll</td><td>MySql.Data.dll</td><td>MYSQLD~1.DLL|MySql.Data.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\MySql.Data.dll</td><td>1</td><td/></row>
 		<row><td>nhibernate.dll</td><td>NHibernate.dll</td><td>NHIBER~1.DLL|NHibernate.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\NHibernate.dll</td><td>1</td><td/></row>
 		<row><td>nhibernate.linq.dll</td><td>NHibernate.Linq.dll</td><td>NHIBER~1.DLL|NHibernate.Linq.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\NHibernate.Linq.dll</td><td>1</td><td/></row>
@@ -1985,6 +2095,7 @@
 		<row><td>nhibernatelayertests.primary</td><td>NHibernateLayerTests.Primary_output</td><td>NHibernateLayerTests.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;NHibernateLayerTests&gt;|Built</td><td>3</td><td/></row>
 		<row><td>ninject.dll</td><td>Ninject.dll</td><td>Ninject.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\jlima\Documents\Visual Studio 2015\Projects\AutoRepair\AutoRepair\AutoRepair.UI.WinForms\bin\Debug\Ninject.dll</td><td>1</td><td/></row>
 		<row><td>repoinfrastructure.primary_o</td><td>RepoInfrastructure.Primary_output</td><td>RepoInfrastructure.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;RepoInfrastructure&gt;|Built</td><td>3</td><td/></row>
+		<row><td>security.encryption.primary_</td><td>Security.Encryption.Primary_output</td><td>Security.Encryption.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Security.Encryption&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2131,24 +2242,44 @@
 		<row><td>AutoMapper.dll</td><td/><td/><td>_EDE76B92_3580_45FB_9B20_36898195A80F_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>AutoRepair.Business.Primary_output</td><td/><td/><td>_A9B96BBB_A2D3_4311_8210_B6FC798C6218_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>AutoRepair.UI.WinForms.Primary_output</td><td/><td/><td>_04B92A9B_C87A_4F28_9D64_BDE666E51F6B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>CustomExceptions.Primary_output</td><td/><td/><td>_3EC33FA5_6C3A_4B54_95B8_43A503A95E21_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>DTOS.Primary_output</td><td/><td/><td>_4B72E8A8_C073_402A_9B1C_FC91354FD283_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.BonusSkins.v15.2.dll</td><td/><td/><td>_66482FAC_4565_47B6_B2AB_54A7B9DF6ED9_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.Data.v15.2.dll</td><td/><td/><td>_39D3DF25_807A_47E7_AF84_4C22367FFB37_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.Office.v15.2.Core.dll</td><td/><td/><td>_E3D4F9DC_D653_4993_B677_F7F5576ED059_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.Pdf.v15.2.Core.dll</td><td/><td/><td>_F3AFF02D_921C_4873_ACF0_B7B9A09FE17B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.Pdf.v15.2.Drawing.dll</td><td/><td/><td>_2896E3B1_EC08_4745_B502_832C907C0A79_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.Printing.v15.2.Core.dll</td><td/><td/><td>_5A753F63_6B35_42BA_867F_A84B751F26BE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.RichEdit.v15.2.Core.dll</td><td/><td/><td>_C5A028C7_CA46_44D6_8428_74283EEC7EAD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.Sparkline.v15.2.Core.dll</td><td/><td/><td>_C7BC1C40_B8B5_47F2_9718_EFDAAB42398C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.Utils.v15.2.dll</td><td/><td/><td>_14CEBDB3_6F36_484B_9041_2F6E5F82779A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.XtraBars.v15.2.dll</td><td/><td/><td>_DAF6A363_2DBF_4420_AF9F_6063C92DD4A7_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.XtraEditors.v15.2.dll</td><td/><td/><td>_F0A78FDD_D496_4952_9E0B_590C7CD4FC52_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.XtraGrid.v15.2.dll</td><td/><td/><td>_3A5A969D_4F68_4928_A9B6_DE61A79CB755_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.XtraLayout.v15.2.dll</td><td/><td/><td>_5508BCAE_B740_488E_A6EE_DD1C6A8404C5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.XtraPrinting.v15.2.dll</td><td/><td/><td>_76AC0161_7CEF_47BC_9511_6821FCC87F5A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DevExpress.XtraTreeList.v15.2.dll</td><td/><td/><td>_0F45E912_B836_471A_A3E5_B58F25B92FA4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.BonusSkins.v15.2.dll</td><td/><td/><td>_C2A9E428_15B5_4BC6_A173_73E24932B613_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Charts.v15.2.Core.dll</td><td/><td/><td>_BDD0A639_99C2_49A5_9C47_4F2B36B51D06_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.CodeParser.v15.2.dll</td><td/><td/><td>_3380E7E3_1B8F_484A_AF36_597CAFBD5E78_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Data.v15.2.dll</td><td/><td/><td>_ACACAE35_FC8C_4D49_B4B3_52AFB5B3D3A2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.DataAccess.v15.2.UI.dll</td><td/><td/><td>_26031F58_831E_4E7E_B73B_EC78B0762405_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.DataAccess.v15.2.dll</td><td/><td/><td>_469FB331_3B22_4F8D_99E2_D8CE23E8FE43_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Office.v15.2.Core.dll</td><td/><td/><td>_0F070528_5696_474A_BA43_D696D75F181F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Pdf.v15.2.Core.dll</td><td/><td/><td>_BF66785D_09A8_4C49_9A4C_B978CD4166E5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Pdf.v15.2.Drawing.dll</td><td/><td/><td>_E2FCAA5C_6066_42B4_869B_24925D5A9F49_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.PivotGrid.v15.2.Core.dll</td><td/><td/><td>_FC667B8A_BAC9_49A2_8C72_5B5B081EFB10_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Printing.v15.2.Core.dll</td><td/><td/><td>_41E68F01_3DA8_4C03_B398_791724FC7BDB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.RichEdit.v15.2.Core.dll</td><td/><td/><td>_BA628ACA_3E56_4F79_8980_68929374AB28_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Sparkline.v15.2.Core.dll</td><td/><td/><td>_17B92C3E_FBCE_4916_8940_4FE2708DB3AA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Utils.v15.2.UI.dll</td><td/><td/><td>_CBA8E3CD_0DF8_444E_9EE9_4F96951178E4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Utils.v15.2.dll</td><td/><td/><td>_4FAA6CAA_9909_4DDA_8B60_B53083AC4093_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.Xpo.v15.2.dll</td><td/><td/><td>_3FEE8471_EF53_44E7_A981_B26626A7034C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraBars.v15.2.dll</td><td/><td/><td>_BFAB6F63_CF7A_4482_9023_31863BCF8B41_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraCharts.v15.2.Extensions.dll</td><td/><td/><td>_0929F608_26E6_4F51_85CD_60C4A51DB7ED_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraCharts.v15.2.Wizard.dll</td><td/><td/><td>_A75F0AC0_5CE2_4CD4_A5AF_6271393D4F2A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraCharts.v15.2.dll</td><td/><td/><td>_08BB421F_1388_4353_B4B7_AE3EBE6E8E20_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraEditors.v15.2.dll</td><td/><td/><td>_665376D9_E9EC_4B55_B796_10020CE4A83D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraGauges.v15.2.Core.dll</td><td/><td/><td>_0BE77474_9C6E_48A4_A4C5_00AF4888455B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraGrid.v15.2.dll</td><td/><td/><td>_B8205800_A334_46E8_B3F3_83DAB991531A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraLayout.v15.2.dll</td><td/><td/><td>_F201F5B9_5C2C_4968_A870_41E2DB729A45_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraNavBar.v15.2.dll</td><td/><td/><td>_6E8783CD_840D_4CE2_85E0_35D9D8D06152_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraPivotGrid.v15.2.dll</td><td/><td/><td>_B1560817_6D8C_405F_B244_754432B89F94_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraPrinting.v15.2.dll</td><td/><td/><td>_DF675B96_8802_4245_9800_F8492D2BBD57_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraReports.v15.2.Extensions.dll</td><td/><td/><td>_B25433D4_0985_45D9_AE8F_0FD159C69B8C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraReports.v15.2.dll</td><td/><td/><td>_E3048ECE_B31D_4693_841B_71EAF47BC174_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraRichEdit.v15.2.dll</td><td/><td/><td>_E0EFC9DE_14B3_49CF_BF7C_4AA4AA1023E1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraTreeList.v15.2.dll</td><td/><td/><td>_B60A8895_10AC_4C65_BDE8_2FCA4D73154B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DevExpress.XtraVerticalGrid.v15.2.dll</td><td/><td/><td>_8326A8C7_0B08_4358_96F9_6A26D91379E2_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>FluentNHibernate.dll</td><td/><td/><td>_2C812EEB_9EE7_43F6_AFBE_FBD22DBBA478_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_EA046A54_9927_4E9F_A02C_CFE8928A4839_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Iesi.Collections.dll</td><td/><td/><td>_369237CD_B72B_438F_A81C_53E32790195A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LicenseKeyGenerator.Primary_output</td><td/><td/><td>_28AF5710_DF75_49E4_83CC_A31907405DD9_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>MySql.Data.dll</td><td/><td/><td>_3F8F203E_82C7_4A82_8F1A_43B6FC606BF0_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NHibernate.Linq.dll</td><td/><td/><td>_BA65998C_44CC_4E9C_9B49_E6A9C1933CEC_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NHibernate.dll</td><td/><td/><td>_AD8CA71C_8ED0_491B_B3C1_A9BD63901905_FILTER</td><td/><td/><td/><td/></row>
@@ -2156,6 +2287,7 @@
 		<row><td>NHibernateLayerTests.Primary_output</td><td/><td/><td>_03F068CF_9408_4AF2_A4D5_DAEBB43C4B8A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Ninject.dll</td><td/><td/><td>_F19F6A7A_627F_498C_B3E5_0A05EF975BA7_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>RepoInfrastructure.Primary_output</td><td/><td/><td>_4B46574D_6A11_43BF_8A9E_0EE5F2AF18BA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Security.Encryption.Primary_output</td><td/><td/><td>_B05E3E69_3132_434F_8DDB_1D3479192BA0_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2436,15 +2568,18 @@
 		<row><td>AutoRepair.Business</td><td>AutoRepair.Business\AutoRepair.Business.csproj</td><td/><td>2</td></row>
 		<row><td>AutoRepair.UI.WinForms</td><td>AutoRepair.UI.WinForms\AutoRepair.UI.WinForms.csproj</td><td/><td>2</td></row>
 		<row><td>CommonFilesFolder</td><td/><td/><td>1</td></row>
+		<row><td>CustomExceptions</td><td>CustomExceptions\CustomExceptions.csproj</td><td/><td>2</td></row>
 		<row><td>DTOS</td><td>DTOS\DTOS.csproj</td><td/><td>2</td></row>
 		<row><td>ISPROJECTDIR</td><td/><td/><td>1</td></row>
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
+		<row><td>LicenseKeyGenerator</td><td>LicenseKeyGenerator\LicenseKeyGenerator.csproj</td><td/><td>2</td></row>
 		<row><td>NHibernateLayer</td><td>NHibernateLayer\NHibernateLayer.csproj</td><td/><td>2</td></row>
 		<row><td>NHibernateLayerTests</td><td>NHibernateLayerTests\NHibernateLayerTests.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>RepoInfrastructure</td><td>RepoInfrastructure\RepoInfrastructure.csproj</td><td/><td>2</td></row>
+		<row><td>Security.Encryption</td><td>Security.Encryption\Security.Encryption.csproj</td><td/><td>2</td></row>
 		<row><td>SystemFolder</td><td/><td/><td>1</td></row>
 		<row><td>WindowsFolder</td><td/><td/><td>1</td></row>
 	</table>
@@ -2749,7 +2884,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>JLDevelopment</td><td>0</td><td/><td>-1859903277</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>JLDevelopment</td><td>0</td><td/><td>-1725688023</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>690233455</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>690233455</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Requiere .NET Framework 4.5</td><td>0</td><td/><td>690272367</td></row>
@@ -3852,8 +3987,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>690233455</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>690233455</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>690233455</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.JLDevelopment.com</td><td>0</td><td/><td>-1859903277</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>JLDevelopment</td><td>0</td><td/><td>-1859903277</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.JLDevelopment.com</td><td>0</td><td/><td>-1725688023</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>JLDevelopment</td><td>0</td><td/><td>-1725688023</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>AutoRepair</td><td>0</td><td/><td>690227503</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>690233455</td></row>
 	</table>

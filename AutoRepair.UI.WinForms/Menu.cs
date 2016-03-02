@@ -125,7 +125,13 @@ namespace AutoRepair.UI.WinForms
 
         private void btnReportByUser_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frmReportByUser = new frmReportByUser();
+            var frmReportByUser = new frmReportByUser {ReportType = ReportType.Users};
+            frmReportByUser.ShowDialog();
+        }
+
+        private void btnProfitReportButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmReportByUser = new frmReportByUser { ReportType = ReportType.GrossProfit };
             frmReportByUser.ShowDialog();
         }
     }

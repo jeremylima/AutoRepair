@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using AutoRepair.Business.Services;
 using AutoRepair.UI.Ninject;
@@ -26,7 +27,13 @@ namespace AutoRepair.UI.WinForms.Forms.User
         {
             var entityList = _entityManagementService.GetAllUsers();
             gvEntities.DataSource = entityList;
-            viewEntities.Columns["Password"].Visible = false;
+
+            if (entityList.Any())
+            {
+                var passwordColumn = viewEntities.Columns.ColumnByFieldName("Password");
+                passwordColumn.Visible = false;
+            }
+                
         }
 
         public override void btnNewEntity_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

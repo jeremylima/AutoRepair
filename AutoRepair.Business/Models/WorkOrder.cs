@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -34,24 +33,6 @@ namespace AutoRepair.Business.Models
         public virtual string User { get; set; }
 
     }
-
-
-    public class WorkOrderByUserDetailsConsult
-    {
-        public virtual int Id { get; set; }
-        public virtual string Description { get; set; }
-        public virtual WorkOrderStatus Status { get; set; }
-        public virtual DateTime Date { get; set; }
-
-        public virtual DateTime FinalizedDate { get; set; }
-        public virtual Client Client { get; set; }
-        public virtual IList<VehicleConsult> Vehicle { get; set; }
-        public virtual User User { get; set; }
-        /*public virtual BindingList<WorkOrderDetail> WorkOrderDetails { get; set; }
-        public virtual BindingList<ServiceCostByUser> ServiceCosts { get; set; }*/
-
-    }
-
     public class VehicleHistory
     {
         public virtual int OrderId { get; set; }

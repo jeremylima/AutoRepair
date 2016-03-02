@@ -37,9 +37,17 @@
 			<Name>AutoRepair.UI.WinForms</Name>
 			<Project>{8B840BA4-108F-4BCB-9566-682CF410280B}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\CustomExceptions\CustomExceptions.csproj">
+			<Name>CustomExceptions</Name>
+			<Project>{05C63440-F211-4BC4-B394-5C9468B16A91}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\DTOS\DTOS.csproj">
 			<Name>DTOS</Name>
 			<Project>{FFC1E5D1-577B-4C78-8790-C4927B3003F3}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\LicenseKeyGenerator\LicenseKeyGenerator.csproj">
+			<Name>LicenseKeyGenerator</Name>
+			<Project>{17859C7A-3D6A-4307-BDAF-AA0129A3D081}</Project>
 		</ProjectReference>
 		<ProjectReference Include="..\NHibernateLayer\NHibernateLayer.csproj">
 			<Name>NHibernateLayer</Name>
@@ -52,6 +60,10 @@
 		<ProjectReference Include="..\RepoInfrastructure\RepoInfrastructure.csproj">
 			<Name>RepoInfrastructure</Name>
 			<Project>{FA5943C4-C0EE-4AC2-82D6-A27E6E36A1CE}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Security.Encryption\Security.Encryption.csproj">
+			<Name>Security.Encryption</Name>
+			<Project>{D42C3496-9700-438D-B028-2BB8E48B3C0B}</Project>
 		</ProjectReference>
 	</ItemGroup>
 </Project>

@@ -238,6 +238,9 @@ namespace AutoRepair.UI.WinForms.Forms.WorkOrder
                 if (!(viewDetails.RowCount > 0) && !(viewServiceCosts.RowCount > 0))
                     return "Por favor ingrese productos o servicios a la order.";
 
+                if(cmbUser.EditValue == null)
+                    return "Por favor asigne la orden a un empleado.";
+
                 return string.Empty;
             }
         }

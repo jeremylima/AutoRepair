@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using AutoRepair.Business.Models;
 using AutoRepair.DataAccess.Entities;
-using User = AutoRepair.Business.Models.User;
 using WorkOrder = AutoRepair.Business.Models.WorkOrder;
 
 namespace AutoRepair.Business.Services

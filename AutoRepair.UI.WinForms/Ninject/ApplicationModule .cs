@@ -104,6 +104,9 @@ namespace AutoRepair.UI.Ninject
 
             Bind<IEncrypter>().To<Encrypter>()
             .InTransientScope();
+
+            Bind<IReportManagementService>().To<ReportManagementService>()
+            .InTransientScope();
         }
     }
 
